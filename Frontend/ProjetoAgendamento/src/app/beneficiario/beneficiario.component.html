@@ -3,48 +3,72 @@
     <h1>Dados Pessoais</h1>
     <p>Preencha seus dados pessoais para que possamos identificá-lo</p>
   </div>
-  <form action="" method="post" class="d-flex flex-column">
+  <form (ngSubmit)="postar()" method="post" class="d-flex flex-column">
     <div class="d-flex flex-column">
       <div class="mb-3 row">
-        <label for="">Nome:</label>
+        <label for="Nome">Nome:</label>
         <input
           type="text"
           placeholder="Seu nome"
           required
           class="form-control"
+          [(ngModel)]="beneficiario.Nome"
+          name="Nome"
         />
       </div>
       <div class="mb-3 row">
-        <label for="">CPF:</label>
+        <label for="Cpf">CPF:</label>
         <input
           type="text"
           placeholder="Seu CPF"
           required
           class="form-control"
+          [(ngModel)]="beneficiario.Cpf"
+          name="Cpf"
         />
       </div>
       <div class="mb-3 row">
-        <label for="">Telefone:</label>
-        <input type="tel" placeholder="Seu telefone" class="form-control" />
+        <label for="Telefone">Telefone:</label>
+        <input type="tel" placeholder="Seu telefone" class="form-control"  [(ngModel)]="beneficiario.Telefone"  name="Telefone"/>
       </div>
       <div class="mb-3 row">
-        <label for="">Endereço:</label>
-        <input type="text" placeholder="Seu endereço" class="form-control" />
+        <label for="Endereco">Endereço:</label>
+        <input type="text" placeholder="Seu endereço" class="form-control"  [(ngModel)]="beneficiario.Endereco" name="Endereco" />
       </div>
       <div class="mb-3 row">
-        <label for="">Nº da Carteirinha:</label>
+        <label for="NumeroCarteirinha">Nº da Carteirinha:</label>
         <input
           type="text"
           placeholder="Nº da Carteirinha"
           required
           class="form-control"
+          [(ngModel)]="beneficiario.NumeroCarteirinha"
+          name="NumeroCarteirinha"
         />
       </div>
-      <!-- <div class="mb-3 row">
-        <label for="">Email:</label>
-        <input type="text" placeholder="Seu e-mail" />
-      </div> -->
+      <div class="mb-3 row">
+        <label for="Email">E-mail:</label>
+        <input
+          type="text"
+          placeholder="Seu e-mail"
+          required
+          class="form-control"
+          [(ngModel)]="beneficiario.Email"
+          name="Email"
+        />
+      </div>
+      <div class="mb-3 row">
+        <label for="Senha">Senha:</label>
+        <input
+          type="password"
+          placeholder="Sua senha"
+          required
+          class="form-control"
+          [(ngModel)]="beneficiario.Senha"
+          name="Senha"
+        />
+      </div>
     </div>
-    <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+    <button type="submit" class="btn btn-primary btn-sm" (click)="salvar()">Enviar</button>
   </form>
 </div>
