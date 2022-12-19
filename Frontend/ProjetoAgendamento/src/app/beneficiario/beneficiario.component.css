@@ -4,4 +4,15 @@
 
 #beneficiarioContainer button {
   background-color: #008585;
+  color: #ffff;
+  border-radius: 3em;
+  border: none;
+  padding: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#beneficiarioContainer button:hover{
+  background-color: #036d6d;
+  transition: background 0.5s;
 }
