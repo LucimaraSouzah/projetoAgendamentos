@@ -10722,19 +10722,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\": {}
+    "C:\\Users\\p.andrade.neves\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "projectUniqueName": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
       "projectName": "ProjetoAgendamento",
-      "projectPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
-      "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\obj\\",
+      "projectPath": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "packagesPath": "C:\\Users\\p.andrade.neves\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\p.andrade.neves\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10798,7 +10798,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
