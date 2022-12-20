@@ -7,7 +7,7 @@ body {
 .logo{
   text-decoration: none;
   color: #444;
-  
+
 }
 .avan {
   color: #008585;
@@ -23,9 +23,13 @@ body {
   padding: 7px;
   text-transform: uppercase;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .buttonPrincipal:hover {
   background-color: #036d6d;
   transition: background 0.5s;
+  color: #fff;
+  text-decoration: none;
 }
