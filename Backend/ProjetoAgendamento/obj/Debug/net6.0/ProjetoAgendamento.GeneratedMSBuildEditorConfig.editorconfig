@@ -9,25 +9,9 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjetoAgendamento
 build_property.RootNamespace = ProjetoAgendamento
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backend\ProjetoAgendamento\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backend\ProjetoAgendamento
-=======
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\ruana.a.da.silva\Desktop\projetoAgendamentos\Backend\ProjetoAgendamento\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ruana.a.da.silva\Desktop\projetoAgendamentos\Backend\ProjetoAgendamento
-=======
 build_property.ProjectDir = C:\Users\l.de.souza.assis\source\repos\ProjetoAgendamento\Backend\ProjetoAgendamento\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\l.de.souza.assis\source\repos\ProjetoAgendamento\Backend\ProjetoAgendamento
->>>>>>> 32d2b2da03eb8fece04816057ceb021bd23c042b
->>>>>>> fd7c27a20393437f6f558945d3d59bb136e3e283
 build_property._RazorSourceGeneratorDebug = 
