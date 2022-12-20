@@ -1,10 +1,11 @@
 export interface IBeneficiarioDto {
   idBeneficiario: number,
-  Nome: string,
-  Cpf: string,
-  Telefone: string,
-  Endereco: string,
-  NumeroCarteirinha: string,
-  Email: string,
-  Senha: string,
+  nome: string,
+  cpf: string,
+  telefone?: string,
+  endereco?: string,
+  numeroCarteirinha: string,
+  ativo: boolean,
+  email: string,
+  senha: string,
 }
