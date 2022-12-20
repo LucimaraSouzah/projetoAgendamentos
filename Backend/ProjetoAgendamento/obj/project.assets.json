@@ -10722,19 +10722,46 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\p.andrade.neves\\.nuget\\packages\\": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\ruana.a.da.silva\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\": {}
+>>>>>>> 32d2b2da03eb8fece04816057ceb021bd23c042b
+>>>>>>> fd7c27a20393437f6f558945d3d59bb136e3e283
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
       "projectName": "ProjetoAgendamento",
-      "projectPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
-      "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\obj\\",
+      "projectPath": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "packagesPath": "C:\\Users\\ruana.a.da.silva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\Users\\ruana.a.da.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+>>>>>>> fd7c27a20393437f6f558945d3d59bb136e3e283
+      "projectName": "ProjetoAgendamento",
+      "projectPath": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "packagesPath": "C:\\Users\\p.andrade.neves\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\p.andrade.neves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 32d2b2da03eb8fece04816057ceb021bd23c042b
+>>>>>>> fd7c27a20393437f6f558945d3d59bb136e3e283
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10798,8 +10825,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\p.andrade.neves\\Documents\\ProjetoAgendamentos\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

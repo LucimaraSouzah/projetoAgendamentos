@@ -80,7 +80,15 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Hospital>(entity =>
         {
+<<<<<<< HEAD
+            entity.HasKey(e => e.IdHospital).HasName("PK__Hospital__AF70C2B2323BCC4A");
+=======
+<<<<<<< HEAD
+            entity.HasKey(e => e.IdHospital).HasName("PK__Hospital__AF70C2B2AA181DC7");
+=======
             entity.HasKey(e => e.IdHospital).HasName("PK__Hospital__AF70C2B21DE896E");
+>>>>>>> 3a65940b59c4bde6bdcaba032f735addd34baf63
+>>>>>>> fd7c27a20393437f6f558945d3d59bb136e3e283
         });
 
         OnModelCreatingPartial(modelBuilder);
