@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
+import { IBeneficiarioDto } from '../../interfaces/IBeneficiarioDto';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

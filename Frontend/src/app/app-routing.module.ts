@@ -1,11 +1,11 @@
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BeneficiarioEditarComponent } from './beneficiario-editar/beneficiario-editar.component';
-import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
+import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
+import { BeneficiarioComponent } from './beneficiarios/beneficiario/beneficiario.component';
 import { ProfissionalComponent } from './profissional/profissional.component';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
-import { OpcoesComponent } from './opcoes/opcoes.component';
+import { OpcoesComponent } from './beneficiarios/beneficiario-opcoes/beneficiario-opcoes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},

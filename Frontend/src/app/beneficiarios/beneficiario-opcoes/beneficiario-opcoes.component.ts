@@ -1,4 +1,4 @@
-import { IBeneficiarioDto } from './../interfaces/IBeneficiarioDto';
+import { IBeneficiarioDto } from '../../interfaces/IBeneficiarioDto';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -6,8 +6,8 @@ import { map } from 'rxjs';
 
 @Component({
   selector: 'app-opcoes',
-  templateUrl: './opcoes.component.html',
-  styleUrls: ['./opcoes.component.css'],
+  templateUrl: './beneficiario-opcoes.component.html',
+  styleUrls: ['./beneficiario-opcoes.component.css'],
 })
 export class OpcoesComponent {
   listaBeneficiarios: IBeneficiarioDto[] = [];

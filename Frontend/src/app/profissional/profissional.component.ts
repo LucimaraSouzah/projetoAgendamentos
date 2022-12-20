@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { IProfissionalDto } from '../interfaces/IProfissionalDto';
-import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
