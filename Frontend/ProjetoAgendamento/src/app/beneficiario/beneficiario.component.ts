@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
 import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-beneficiario',
@@ -14,6 +15,9 @@ export class BeneficiarioComponent implements OnInit {
   idBeneficiario!: number;
 
   listaBeneficiarios: IBeneficiarioDto[] = [];
+
+  mensagemSucesso = false;
+  mensagemErro = false;
 
   postar() {
     console.log('Post efetuado!');
@@ -50,7 +54,7 @@ export class BeneficiarioComponent implements OnInit {
     }
   }
 
-  salvar() {
+  cadastrar() {
     if (this.validarInformacoes()) {
       console.log(`Objeto para salvar: ${JSON.stringify(this.beneficiario)}`);
 
@@ -59,21 +63,24 @@ export class BeneficiarioComponent implements OnInit {
         //   console.log('erro na data');
         // this.aluno.aniversario = '0001-01-01';
         // }
-
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            this.router.navigate(['listabeneficiarios']);
+            this.mensagemErro = false;
+            this.mensagemSucesso = true;
           });
-      } else {
+        } else {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            this.router.navigate(['listabeneficiarios']);
           });
       }
     } else {
       console.log('Erro na validação');
+      this.mensagemSucesso = false;
+      this.mensagemErro = true;
       // TRATAMENTO DE ERRO
       // ALERTA
       // BORDA VERMELHA
