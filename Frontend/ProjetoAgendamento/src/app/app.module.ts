@@ -6,19 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { NavComponent } from './nav/nav.component';
+import { ProfissionalComponent } from './profissional/profissional.component';
 import { CommonModule } from '@angular/common';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
-import { OpcoesComponent } from './opcoes/opcoes.component';
-import { BeneficiarioEditarComponent } from './beneficiario-editar/beneficiario-editar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeneficiarioComponent,
     NavComponent,
+    ProfissionalComponent,
     EspecialidadeComponent,
-    OpcoesComponent,
-    BeneficiarioEditarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

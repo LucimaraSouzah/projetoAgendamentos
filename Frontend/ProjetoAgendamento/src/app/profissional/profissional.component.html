@@ -1,0 +1,29 @@
+<div id="profissionalContainer" class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25">
+  <div class="text-center">
+    <h1>Dados do Profissional</h1>
+    <p>Preencha seus dados pessoais para que possamos identificá-lo</p>
+  </div>
+  <form (ngSubmit)="postar()" method="post" class="d-flex flex-column">
+    <div class="d-flex flex-column">
+      <div class="mb-3 row">
+        <label for="Nome">Nome:</label>
+        <input
+          type="text"
+          placeholder="Seu nome"
+          required
+          class="form-control"
+          [(ngModel)]="profissional.Nome"
+          name="Nome"
+        />
+      <div class="mb-3 row">
+        <label for="Telefone">Telefone:</label>
+        <input type="tel" placeholder="Seu telefone" class="form-control"  [(ngModel)]="profissional.Telefone"  name="Telefone"/>
+      </div>
+      <div class="mb-3 row">
+        <label for="Endereco">Endereço:</label>
+        <input type="text" placeholder="Seu endereço" class="form-control"  [(ngModel)]="profissional.Endereco" name="Endereco" />
+      </div>
+    </div>
+    <button type="submit" class="btn buttonPrincipal" (click)="salvar()">Enviar</button>
+  <!-- </form> -->
+</div>
