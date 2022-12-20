@@ -65,9 +65,6 @@ export class EspecialidadeComponent implements OnInit {
       console.log('Erro na validação');
       this.mensagemSucesso = false;
       this.mensagemErro = true;
-      // TRATAMENTO DE ERRO
-      // ALERTA
-      // BORDA VERMELHA
     }
   }
 
@@ -75,8 +72,6 @@ export class EspecialidadeComponent implements OnInit {
     if (this.especialidade.Nome == '') {
       return false;
     }
-
-    // VALIDAR COM REGEX
 
     return true;
   }

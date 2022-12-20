@@ -3,7 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
 import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-beneficiario',
@@ -57,7 +56,7 @@ export class BeneficiarioComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listabeneficiarios']);
+            this.router.navigate(['opcoes']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -65,7 +64,7 @@ export class BeneficiarioComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listabeneficiarios']);
+            this.router.navigate(['opcoes']);
           });
       }
     } else {

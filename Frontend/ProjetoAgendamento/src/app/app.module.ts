@@ -8,6 +8,7 @@ import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { NavComponent } from './nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
+import { OpcoesComponent } from './opcoes/opcoes.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EspecialidadeComponent } from './especialidade/especialidade.component'
     BeneficiarioComponent,
     NavComponent,
     EspecialidadeComponent,
+    OpcoesComponent,
   ],
   imports: [
     BrowserModule,
