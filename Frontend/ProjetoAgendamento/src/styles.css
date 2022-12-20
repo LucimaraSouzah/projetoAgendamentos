@@ -4,6 +4,16 @@
 body {
   background-color: #dce9e5;
 }
+.logo{
+  text-decoration: none;
+  color: #444;
+  
+}
+.avan {
+  color: #008585;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 .buttonPrincipal {
   background-color: #008585;

@@ -30,9 +30,9 @@ export class EspecialidadeComponent implements OnInit {
   ngOnInit(): void {
     this.especialidade = {
       idEspecialidade: this.idEspecialidade ?? 0,
-      Nome: '',
-      Descricao: '',
-      Ativo: false,
+      nome: '',
+      descricao: '',
+      ativo: false,
     };
 
     if (this.idEspecialidade) {
@@ -50,7 +50,7 @@ export class EspecialidadeComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Especialidade', this.especialidade)
           .subscribe((data) => {
-            this.router.navigate(['listaEspecialidades']);
+            // this.router.navigate(['listaEspecialidades']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -58,25 +58,20 @@ export class EspecialidadeComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Especialidade', this.especialidade)
           .subscribe((data) => {
-            this.router.navigate(['listaEspecialidades']);
+            // this.router.navigate(['listaEspecialidades']);
           });
       }
     } else {
       console.log('Erro na validação');
       this.mensagemSucesso = false;
       this.mensagemErro = true;
-      // TRATAMENTO DE ERRO
-      // ALERTA
-      // BORDA VERMELHA
     }
   }
 
   validarInformacoes(): boolean {
-    if (this.especialidade.Nome == '') {
+    if (this.especialidade.nome == '') {
       return false;
     }
-
-    // VALIDAR COM REGEX
 
     return true;
   }

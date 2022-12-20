@@ -9,6 +9,12 @@ import { NavComponent } from './nav/nav.component';
 import { ProfissionalComponent } from './profissional/profissional.component';
 import { CommonModule } from '@angular/common';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
+<<<<<<< HEAD
+import { HomeComponent } from './home/home.component';
+=======
+import { OpcoesComponent } from './opcoes/opcoes.component';
+import { BeneficiarioEditarComponent } from './beneficiario-editar/beneficiario-editar.component';
+>>>>>>> 3a65940b59c4bde6bdcaba032f735addd34baf63
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ import { EspecialidadeComponent } from './especialidade/especialidade.component'
     NavComponent,
     ProfissionalComponent,
     EspecialidadeComponent,
+<<<<<<< HEAD
+    HomeComponent,
+=======
+    OpcoesComponent,
+    BeneficiarioEditarComponent,
+>>>>>>> 3a65940b59c4bde6bdcaba032f735addd34baf63
   ],
   imports: [
     BrowserModule,

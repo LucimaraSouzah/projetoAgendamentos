@@ -1,3 +1,4 @@
+<app-nav></app-nav>
 <div
   id="especialidadeContainer"
   class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
@@ -18,7 +19,7 @@
         placeholder="Nome da especialidade"
         required
         class="form-control"
-        [(ngModel)]="especialidade.Nome"
+        [(ngModel)]="especialidade.nome"
         name="Nome"
       />
     </div>
@@ -26,9 +27,9 @@
       <label for="descricao">Descrição:</label>
       <textarea
         id="textarea"
-        name="Descricao"
+        name="descricao"
         class="form-control"
-        [(ngModel)]="especialidade.Descricao"
+        [(ngModel)]="especialidade.descricao"
         placeholder="Descrição da especialidade"
       >
       </textarea>
@@ -40,7 +41,7 @@
         type="checkbox"
         name="Ativo"
         class="form-check-input ms-2"
-        [ngModel]="especialidade.Ativo"
+        [(ngModel)]="especialidade.ativo"
         required
       />
     </div>

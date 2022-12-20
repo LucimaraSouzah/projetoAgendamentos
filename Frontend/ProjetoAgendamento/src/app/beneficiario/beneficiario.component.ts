@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
-import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-beneficiario',
@@ -32,14 +30,14 @@ export class BeneficiarioComponent implements OnInit {
   ngOnInit(): void {
     this.beneficiario = {
       idBeneficiario: this.idBeneficiario ?? 0,
-      Nome: '',
-      Cpf: '',
-      Telefone: '',
-      Endereco: '',
-      NumeroCarteirinha: '',
-      Ativo: false,
-      Email: '',
-      Senha: '',
+      nome: '',
+      cpf: '',
+      telefone: '',
+      endereco: '',
+      numeroCarteirinha: '',
+      ativo: false,
+      email: '',
+      senha: '',
     };
 
     if (this.idBeneficiario) {
@@ -57,7 +55,7 @@ export class BeneficiarioComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listabeneficiarios']);
+            this.router.navigate(['opcoes']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -65,7 +63,7 @@ export class BeneficiarioComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listabeneficiarios']);
+            this.router.navigate(['opcoes']);
           });
       }
     } else {
@@ -76,11 +74,11 @@ export class BeneficiarioComponent implements OnInit {
 
   validarInformacoes(): boolean {
     if (
-      this.beneficiario.Nome == '' ||
-      this.beneficiario.Cpf == '' ||
-      this.beneficiario.NumeroCarteirinha == '' ||
-      this.beneficiario.Email == '' ||
-      this.beneficiario.Senha == ''
+      this.beneficiario.nome == '' ||
+      this.beneficiario.cpf == '' ||
+      this.beneficiario.numeroCarteirinha == '' ||
+      this.beneficiario.email == '' ||
+      this.beneficiario.senha == ''
     ) {
       return false;
     }
