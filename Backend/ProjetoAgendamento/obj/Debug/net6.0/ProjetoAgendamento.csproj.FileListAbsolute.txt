@@ -580,6 +580,9 @@ C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backe
 C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backend\ProjetoAgendamento\obj\Debug\net6.0\ProjetoAgendamento.genruntimeconfig.cache
 C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backend\ProjetoAgendamento\obj\Debug\net6.0\ref\ProjetoAgendamento.dll
 =======
+<<<<<<< HEAD
+>>>>>>> 6d51829dbc3886c2a007517d4d1a6dd58407b37e
+=======
 >>>>>>> 6d51829dbc3886c2a007517d4d1a6dd58407b37e
 C:\Users\l.de.souza.assis\source\repos\ProjetoAgendamento\Backend\ProjetoAgendamento\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\l.de.souza.assis\source\repos\ProjetoAgendamento\Backend\ProjetoAgendamento\bin\Debug\net6.0\appsettings.json
