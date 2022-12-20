@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ProjetoAgendamento"
+    "\\ProjetoAgendamento",
+    "\\ProjetoAgendamento\\Controllers"
   ],
-  "SelectedNode": "\\ProjetoAgendamento\\appsettings.json",
+  "SelectedNode": "\\ProjetoAgendamento\\Controllers\\AgendamentoController.cs",
   "PreviewInSolutionExplorer": false
 }

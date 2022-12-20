@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { NavComponent } from './nav/nav.component';
 import { ProfissionalComponent } from './profissional/profissional.component';
+import { CommonModule } from '@angular/common';
+import { EspecialidadeComponent } from './especialidade/especialidade.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { ProfissionalComponent } from './profissional/profissional.component';
     BeneficiarioComponent,
     NavComponent,
     ProfissionalComponent,
+    EspecialidadeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

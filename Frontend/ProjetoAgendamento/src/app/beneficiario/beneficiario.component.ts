@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
 import { map } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-beneficiario',
@@ -15,9 +16,8 @@ export class BeneficiarioComponent implements OnInit {
 
   listaBeneficiarios: IBeneficiarioDto[] = [];
 
-  postar() {
-    console.log('Post efetuado!');
-  }
+  mensagemSucesso = false;
+  mensagemErro = false;
 
   constructor(
     private http: HttpClient,
@@ -37,6 +37,7 @@ export class BeneficiarioComponent implements OnInit {
       Telefone: '',
       Endereco: '',
       NumeroCarteirinha: '',
+      Ativo: false,
       Email: '',
       Senha: '',
     };
@@ -50,43 +51,40 @@ export class BeneficiarioComponent implements OnInit {
     }
   }
 
-  salvar() {
+  cadastrar() {
     if (this.validarInformacoes()) {
-      console.log(`Objeto para salvar: ${JSON.stringify(this.beneficiario)}`);
-
       if (this.beneficiario.idBeneficiario == 0) {
-        // if(!this.aluno.aniversario || this.aluno.aniversario==''){
-        //   console.log('erro na data');
-        // this.aluno.aniversario = '0001-01-01';
-        // }
-
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            this.router.navigate(['listabeneficiarios']);
+            this.mensagemErro = false;
+            this.mensagemSucesso = true;
           });
       } else {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            this.router.navigate(['listabeneficiarios']);
           });
       }
     } else {
-      console.log('Erro na validação');
-      // TRATAMENTO DE ERRO
-      // ALERTA
-      // BORDA VERMELHA
+      this.mensagemSucesso = false;
+      this.mensagemErro = true;
     }
   }
 
   validarInformacoes(): boolean {
-    if (this.beneficiario.Nome == '') {
+    if (
+      this.beneficiario.Nome == '' ||
+      this.beneficiario.Cpf == '' ||
+      this.beneficiario.NumeroCarteirinha == '' ||
+      this.beneficiario.Email == '' ||
+      this.beneficiario.Senha == ''
+    ) {
       return false;
     }
-
     // VALIDAR COM REGEX
-
     return true;
   }
 }
