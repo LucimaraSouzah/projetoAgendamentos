@@ -5,30 +5,66 @@
 >
   <div class="text-center">
     <h2>Especialidades</h2>
-    <p>Selecione a especialidade desejada!</p>
+    <p>Crie a especialidade desejada!</p>
   </div>
-  <div class="mb-3">
-    <label for="NomeEspecialidade">Nome Especialidade:</label>
-    <input
-      type="text"
-      placeholder="Seu nome"
-      required
-      class="form-control"
-
-      name="Nome"
-    />
-  </div>
-  <label for="descricao">Descrição</label>
-  <textarea
-    id="textarea"
-    name="textarea"
-    rows="5"
-    cols="33"
+  <form
+    method="post"
+    class="d-flex flex-column align-items-center justify-content-center"
+    id="formEspecialidade"
   >
-  </textarea>
-<div class="ativo">
-  <label>Ativo</label>
-  <input ativo="ativo" type="checkbox" />
-</div>
-<button type="submit" class="btn buttonPrincipal" >Enviar</button>
+    <div class="mb-3">
+      <label for="NomeEspecialidade">Nome especialidade:</label>
+      <input
+        type="text"
+        placeholder="Nome da especialidade"
+        required
+        class="form-control"
+        [(ngModel)]="especialidade.nome"
+        name="Nome"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="descricao">Descrição:</label>
+      <textarea
+        id="textarea"
+        name="descricao"
+        class="form-control"
+        [(ngModel)]="especialidade.descricao"
+        placeholder="Descrição da especialidade"
+      >
+      </textarea>
+    </div>
+    <div class="ativo d-flex align-self-center justify-content-center">
+      <label>Ativo:</label>
+      <input
+        ativo="ativo"
+        type="checkbox"
+        name="Ativo"
+        class="form-check-input ms-2"
+        [(ngModel)]="especialidade.ativo"
+        required
+      />
+    </div>
+    <div
+      class="alert alert-light text-center"
+      role="alert"
+      *ngIf="mensagemSucesso"
+    >
+      Especialidade criada com sucesso!
+    </div>
+    <div
+      class="alert alert-danger text-center"
+      role="alert"
+      *ngIf="mensagemErro"
+    >
+      Erro ao cadastrar! Verifique os dados e tente novamente.
+    </div>
+    <button
+      type="submit"
+      class="btn buttonPrincipal align-self-center"
+      (click)="cadastrar()"
+    >
+      Enviar
+    </button>
+  </form>
 </div>

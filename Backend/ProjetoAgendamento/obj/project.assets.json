@@ -10722,19 +10722,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andressa.h.moreira\\.nuget\\packages\\": {}
+    "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
       "projectName": "ProjetoAgendamento",
-      "projectPath": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
-      "packagesPath": "C:\\Users\\andressa.h.moreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
+      "projectPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\andressa.h.moreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
