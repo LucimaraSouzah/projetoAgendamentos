@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj": {}
+    "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj": {
+    "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+        "projectUniqueName": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
         "projectName": "ProjetoAgendamento",
-        "projectPath": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
-        "packagesPath": "C:\\Users\\andressa.h.moreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andressa.h.moreira\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
+        "projectPath": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+        "packagesPath": "C:\\Users\\ruana.a.da.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruana.a.da.silva\\Desktop\\projetoAgendamentos\\Backend\\ProjetoAgendamento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andressa.h.moreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ruana.a.da.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
