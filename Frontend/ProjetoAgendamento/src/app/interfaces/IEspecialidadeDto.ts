@@ -1,6 +1,6 @@
 export interface IEspecialidadeDto {
   idEspecialidade: number,
-  Nome: string,
-  Descricao?: string,
-  Ativo: boolean,
+  nome: string,
+  descricao?: string,
+  ativo: boolean,
 }

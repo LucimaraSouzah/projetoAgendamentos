@@ -44,12 +44,7 @@ export class OpcoesComponent {
       .delete(`https://localhost:7206/api/Beneficiario/${id}`)
       .subscribe((data) => {
         this.listarTodos();
-      }
-    );
-  }
-
-  atualizarBeneficiario(id: number) {
-    this.router.navigate([`https://localhost:7206/api/Beneficiario/${id}`]);
+      });
   }
 
   // adicionarAluno(){

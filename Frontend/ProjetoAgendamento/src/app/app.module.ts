@@ -9,6 +9,7 @@ import { NavComponent } from './nav/nav.component';
 import { CommonModule } from '@angular/common';
 import { EspecialidadeComponent } from './especialidade/especialidade.component';
 import { OpcoesComponent } from './opcoes/opcoes.component';
+import { BeneficiarioEditarComponent } from './beneficiario-editar/beneficiario-editar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { OpcoesComponent } from './opcoes/opcoes.component';
     NavComponent,
     EspecialidadeComponent,
     OpcoesComponent,
+    BeneficiarioEditarComponent,
   ],
   imports: [
     BrowserModule,
