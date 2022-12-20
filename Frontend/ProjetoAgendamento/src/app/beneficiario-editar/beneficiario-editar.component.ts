@@ -1,8 +1,6 @@
-import { BeneficiarioComponent } from './../beneficiario/beneficiario.component';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map } from 'rxjs';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
 
 @Component({

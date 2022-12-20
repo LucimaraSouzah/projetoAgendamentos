@@ -581,6 +581,9 @@ C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backe
 C:\Users\p.andrade.neves\Documents\ProjetoAgendamentos\projetoAgendamentos\Backend\ProjetoAgendamento\obj\Debug\net6.0\ref\ProjetoAgendamento.dll
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6d51829dbc3886c2a007517d4d1a6dd58407b37e
+=======
 >>>>>>> 6d51829dbc3886c2a007517d4d1a6dd58407b37e
 =======
 >>>>>>> 6d51829dbc3886c2a007517d4d1a6dd58407b37e
