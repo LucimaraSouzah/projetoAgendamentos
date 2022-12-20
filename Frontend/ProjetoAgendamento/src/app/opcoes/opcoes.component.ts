@@ -47,6 +47,10 @@ export class OpcoesComponent {
       });
   }
 
+  atualizarBeneficiario(id: number) {
+    this.router.navigate([`editarBeneficiario/${id}`]);
+  }
+
   // adicionarAluno(){
   //   this.router.navigate([`editarAluno`]);
   // }

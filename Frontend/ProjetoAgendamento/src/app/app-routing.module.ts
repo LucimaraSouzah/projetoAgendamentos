@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'especialidade', component: EspecialidadeComponent },
   { path: 'opcoes', component: OpcoesComponent },
   { path: 'editarBeneficiario', component: BeneficiarioEditarComponent },
+  { path: 'editarBeneficiario/:id', component: BeneficiarioEditarComponent },
 ];
 
 @NgModule({

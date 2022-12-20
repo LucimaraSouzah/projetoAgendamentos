@@ -1,1 +1,5 @@
-
+.buttonPrincipal:hover {
+  background-color: #036d6d;
+  transition: background 0.5s;
+  color: #fafafa;
+}

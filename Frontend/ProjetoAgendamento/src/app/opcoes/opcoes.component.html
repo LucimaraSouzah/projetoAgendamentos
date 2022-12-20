@@ -38,14 +38,13 @@
         <td>{{ beneficiario.email }}</td>
         <td>{{ beneficiario.senha }}</td>
         <td>
-          <a href="editarBeneficiario">
-            <button
-              type="submit"
-              class="btn btn-danger"
-            >
-              Atualizar
-            </button>
-          </a>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="atualizarBeneficiario(beneficiario.idBeneficiario)"
+          >
+            Editar
+          </button>
         </td>
         <td>
           <button
