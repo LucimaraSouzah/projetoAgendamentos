@@ -31,14 +31,14 @@ export class BeneficiarioComponent implements OnInit {
   ngOnInit(): void {
     this.beneficiario = {
       idBeneficiario: this.idBeneficiario ?? 0,
-      Nome: '',
-      Cpf: '',
-      Telefone: '',
-      Endereco: '',
-      NumeroCarteirinha: '',
-      Ativo: false,
-      Email: '',
-      Senha: '',
+      nome: '',
+      cpf: '',
+      telefone: '',
+      endereco: '',
+      numeroCarteirinha: '',
+      ativo: false,
+      email: '',
+      senha: '',
     };
 
     if (this.idBeneficiario) {
@@ -75,11 +75,11 @@ export class BeneficiarioComponent implements OnInit {
 
   validarInformacoes(): boolean {
     if (
-      this.beneficiario.Nome == '' ||
-      this.beneficiario.Cpf == '' ||
-      this.beneficiario.NumeroCarteirinha == '' ||
-      this.beneficiario.Email == '' ||
-      this.beneficiario.Senha == ''
+      this.beneficiario.nome == '' ||
+      this.beneficiario.cpf == '' ||
+      this.beneficiario.numeroCarteirinha == '' ||
+      this.beneficiario.email == '' ||
+      this.beneficiario.senha == ''
     ) {
       return false;
     }

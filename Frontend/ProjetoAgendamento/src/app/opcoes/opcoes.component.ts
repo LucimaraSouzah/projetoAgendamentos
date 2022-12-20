@@ -19,16 +19,8 @@ export class OpcoesComponent {
   listarTodos() {
     this.http
       .get('https://localhost:7206/api/Beneficiario/')
-      .pipe(
-        map((response: any) => {
-          return Object.values(response);
-        })
-      )
       .subscribe((data) => {
-        for (let index = 0; index < data.length; index++) {
-          let conteudoJson: any = data[index];
-          this.listaBeneficiarios.push(conteudoJson as IBeneficiarioDto);
-        }
+        this.listaBeneficiarios = data as IBeneficiarioDto[];
       });
   }
 
@@ -51,16 +43,13 @@ export class OpcoesComponent {
     this.http
       .delete(`https://localhost:7206/api/Beneficiario/${id}`)
       .subscribe((data) => {
-        this.router.navigate(['opcoes']);
+        this.listarTodos();
       }
     );
   }
 
   atualizarBeneficiario(id: number) {
-    this.http.put(
-      `https://localhost:7206/api/Beneficiario/${id}`,
-      this.listaBeneficiarios
-    );
+    this.router.navigate([`https://localhost:7206/api/Beneficiario/${id}`]);
   }
 
   // adicionarAluno(){
