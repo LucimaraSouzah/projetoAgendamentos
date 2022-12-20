@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "meFwaIvFRU6H201Wv8foYWLnOtUgJZgMBD7V2qL5olobwQzT69/aCW5GvxjQTeMlvAmdjpnCsRifl/gKCErPMQ==",
+  "dgSpecHash": "oeEmbdUURnLFVHPTluPZomZNU+7wIHHpreuEw1uMGDPHB9ZJ9VaNY4T5VoLTfSVoqXvyRNaqwwgyNJd/UABzVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+  "projectFilePath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

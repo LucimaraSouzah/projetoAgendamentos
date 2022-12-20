@@ -10727,11 +10727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
       "projectName": "ProjetoAgendamento",
-      "projectPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
+      "projectPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\ProjetoAgendamento.csproj",
       "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\ProjetoAgendamento\\obj\\",
+      "outputPath": "C:\\Users\\l.de.souza.assis\\source\\repos\\ProjetoAgendamento\\Backend\\ProjetoAgendamento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
