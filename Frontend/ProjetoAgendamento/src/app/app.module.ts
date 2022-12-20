@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { BeneficiarioComponent } from './beneficiario/beneficiario.component';
 import { NavComponent } from './nav/nav.component';
 import { CommonModule } from '@angular/common';
+import { EspecialidadeComponent } from './especialidade/especialidade.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeneficiarioComponent,
     NavComponent,
+    EspecialidadeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+#especialidadeContainer{
+  width: 100%;
+  height: 100vh;
+}
+label{
+  padding: 5px;
+
+}
+textarea
+{
+  padding: 8px;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+}
+
+.ativo
+{
+  display: flex;
+  padding: 5px;
+  
+}
+.buttonPrincipal{
+  width: 15em;
+}
