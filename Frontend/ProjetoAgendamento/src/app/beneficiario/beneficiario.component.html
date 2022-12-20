@@ -6,14 +6,9 @@
     <h2>Dados Pessoais</h2>
     <p>Preencha seus dados pessoais para que possamos identificá-lo</p>
   </div>
-  <form
-    (ngSubmit)="postar()"
-    method="post"
-    class="d-flex flex-column"
-    id="formBeneficiario"
-  >
-    <div class="d-flex flex-column flex-lg-row">
-      <div class="mb-3">
+  <form method="post" class="d-flex flex-column" id="formBeneficiario">
+    <div class="d-flex flex-column flex-lg-row mb-3">
+      <div>
         <label for="Nome">Nome:</label>
         <input
           type="text"
@@ -24,7 +19,7 @@
           name="Nome"
         />
       </div>
-      <div class="mb-3 ms-lg-3">
+      <div class="ms-lg-3">
         <label for="Cpf">CPF:</label>
         <input
           type="text"
@@ -36,8 +31,8 @@
         />
       </div>
     </div>
-    <div class="d-flex flex-column flex-lg-row">
-      <div class="mb-3">
+    <div class="d-flex flex-column flex-lg-row mb-3">
+      <div>
         <label for="Telefone">Telefone:</label>
         <input
           type="tel"
@@ -47,7 +42,7 @@
           name="Telefone"
         />
       </div>
-      <div class="mb-3 ms-lg-3">
+      <div class="ms-lg-3">
         <label for="Endereco">Endereço:</label>
         <input
           type="text"
@@ -58,19 +53,21 @@
         />
       </div>
     </div>
-    <div class="mb-3">
-      <label for="NumeroCarteirinha">Nº da Carteirinha:</label>
-      <input
-        type="text"
-        placeholder="Nº da Carteirinha"
-        required
-        class="form-control"
-        [(ngModel)]="beneficiario.NumeroCarteirinha"
-        name="NumeroCarteirinha"
-      />
+    <div>
+      <div class="mb-3">
+        <label for="NumeroCarteirinha">Nº da Carteirinha:</label>
+        <input
+          type="text"
+          placeholder="Nº da Carteirinha"
+          required
+          class="form-control"
+          [(ngModel)]="beneficiario.NumeroCarteirinha"
+          name="NumeroCarteirinha"
+        />
+      </div>
     </div>
     <div class="d-flex flex-column flex-lg-row">
-      <div class="mb-3">
+      <div>
         <label for="Email">E-mail:</label>
         <input
           type="text"
@@ -81,7 +78,7 @@
           name="Email"
         />
       </div>
-      <div class="mb-3 ms-lg-3">
+      <div class="ms-lg-3">
         <label for="Senha">Senha:</label>
         <input
           type="password"
@@ -93,12 +90,33 @@
         />
       </div>
     </div>
-    <div class="alert alert-light text-center" role="alert" *ngIf="mensagemSucesso">
+    <div class="d-flex align-items-center justify-content-center m-2">
+      <label>Ativo:</label>
+      <input
+        ativo="ativo"
+        type="checkbox"
+        name="Ativo"
+        class="form-check-input ms-2"
+        [ngModel]="beneficiario.Ativo"
+        required
+      />
+    </div>
+    <div
+      class="alert alert-light text-center"
+      role="alert"
+      *ngIf="mensagemSucesso"
+    >
       Cadastro realizado com sucesso!
     </div>
-    <div class="alert alert-danger text-center" role="alert" *ngIf="mensagemErro">
+    <div
+      class="alert alert-danger text-center"
+      role="alert"
+      *ngIf="mensagemErro"
+    >
       Erro ao cadastrar! Verifique os dados e tente novamente.
     </div>
-    <button type="submit" class="btn buttonPrincipal" (click)="cadastrar()">Enviar</button>
+    <button type="submit" class="btn buttonPrincipal" (click)="cadastrar()">
+      Enviar
+    </button>
   </form>
 </div>

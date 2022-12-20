@@ -19,10 +19,6 @@ export class BeneficiarioComponent implements OnInit {
   mensagemSucesso = false;
   mensagemErro = false;
 
-  postar() {
-    console.log('Post efetuado!');
-  }
-
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
@@ -41,6 +37,7 @@ export class BeneficiarioComponent implements OnInit {
       Telefone: '',
       Endereco: '',
       NumeroCarteirinha: '',
+      Ativo: false,
       Email: '',
       Senha: '',
     };
@@ -56,13 +53,7 @@ export class BeneficiarioComponent implements OnInit {
 
   cadastrar() {
     if (this.validarInformacoes()) {
-      console.log(`Objeto para salvar: ${JSON.stringify(this.beneficiario)}`);
-
       if (this.beneficiario.idBeneficiario == 0) {
-        // if(!this.aluno.aniversario || this.aluno.aniversario==''){
-        //   console.log('erro na data');
-        // this.aluno.aniversario = '0001-01-01';
-        // }
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
@@ -70,7 +61,7 @@ export class BeneficiarioComponent implements OnInit {
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
-        } else {
+      } else {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
@@ -78,22 +69,22 @@ export class BeneficiarioComponent implements OnInit {
           });
       }
     } else {
-      console.log('Erro na validação');
       this.mensagemSucesso = false;
       this.mensagemErro = true;
-      // TRATAMENTO DE ERRO
-      // ALERTA
-      // BORDA VERMELHA
     }
   }
 
   validarInformacoes(): boolean {
-    if (this.beneficiario.Nome == '') {
+    if (
+      this.beneficiario.Nome == '' ||
+      this.beneficiario.Cpf == '' ||
+      this.beneficiario.NumeroCarteirinha == '' ||
+      this.beneficiario.Email == '' ||
+      this.beneficiario.Senha == ''
+    ) {
       return false;
     }
-
     // VALIDAR COM REGEX
-
     return true;
   }
 }
