@@ -49,7 +49,7 @@ export class EditarProfissionalComponent {
       this.profissional
     )
     .subscribe((data) => {
-      this.router.navigate(['profissional-lista']);
+      this.router.navigate(['listaProfissional']);
       this.mensagemErro = false;
       this.mensagemSucesso = true;
     }
