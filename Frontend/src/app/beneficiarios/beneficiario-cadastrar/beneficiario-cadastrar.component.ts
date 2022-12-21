@@ -5,10 +5,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-beneficiario',
-  templateUrl: './beneficiario.component.html',
-  styleUrls: ['./beneficiario.component.css'],
+  templateUrl: './beneficiario-cadastrar.component.html',
+  styleUrls: ['./beneficiario-cadastrar.component.css'],
 })
-export class BeneficiarioComponent implements OnInit {
+export class CadastrarBeneficiarioComponent implements OnInit {
   beneficiario!: IBeneficiarioDto;
   idBeneficiario!: number;
 

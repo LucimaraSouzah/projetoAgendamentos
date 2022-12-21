@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-especialidade-opcoes',
-  templateUrl: './especialidade-opcoes.component.html',
-  styleUrls: ['./especialidade-opcoes.component.css']
+  selector: 'app-especialidade-lista',
+  templateUrl: './especialidade-lista.component.html',
+  styleUrls: ['./especialidade-lista.component.css']
 })
-export class EspecialidadeOpcoesComponent {
+export class ListaEspecialidadeComponent {
   listaEspecialidades: IEspecialidadeDto[] = [];
 
   constructor(private http: HttpClient, private router: Router){

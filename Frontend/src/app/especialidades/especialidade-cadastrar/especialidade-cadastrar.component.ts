@@ -1,14 +1,14 @@
-import { IEspecialidadeDto } from './../../interfaces/IEspecialidadeDto';
+import { IEspecialidadeDto } from '../../interfaces/IEspecialidadeDto';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-especialidade',
-  templateUrl: './especialidade.component.html',
-  styleUrls: ['./especialidade.component.css'],
+  templateUrl: './especialidade-cadastrar.component.html',
+  styleUrls: ['./especialidade-cadastrar.component.css'],
 })
-export class EspecialidadeComponent implements OnInit {
+export class CadastrarEspecialidadeComponent implements OnInit {
   especialidade!: IEspecialidadeDto;
   idEspecialidade!: number;
 

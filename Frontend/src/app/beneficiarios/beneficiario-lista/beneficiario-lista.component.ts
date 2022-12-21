@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { map } from 'rxjs';
 
 @Component({
-  selector: 'app-opcoes',
-  templateUrl: './beneficiario-opcoes.component.html',
-  styleUrls: ['./beneficiario-opcoes.component.css'],
+  selector: 'app-lista',
+  templateUrl: './beneficiario-lista.component.html',
+  styleUrls: ['./beneficiario-lista.component.css'],
 })
-export class OpcoesComponent {
+export class ListaBeneficiarioComponent {
   listaBeneficiarios: IBeneficiarioDto[] = [];
 
   constructor(private http: HttpClient, private router: Router) {
