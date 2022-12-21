@@ -50,7 +50,7 @@ export class CadastrarEspecialidadeComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Especialidade', this.especialidade)
           .subscribe((data) => {
-            // this.router.navigate(['listaEspecialidades']);
+             this.router.navigate(['listaEspecialidades']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -58,7 +58,7 @@ export class CadastrarEspecialidadeComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Especialidade', this.especialidade)
           .subscribe((data) => {
-            // this.router.navigate(['listaEspecialidades']);
+            this.router.navigate(['listaEspecialidades']);
           });
       }
     } else {
@@ -69,7 +69,10 @@ export class CadastrarEspecialidadeComponent implements OnInit {
   }
 
   validarInformacoes(): boolean {
-    if (this.especialidade.nome == '') {
+    if (
+      this.especialidade.nome == '' ||
+      this.especialidade.ativo
+      ) {
       return false;
     }
 

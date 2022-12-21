@@ -1,2 +1,70 @@
 <app-nav></app-nav>
+<div
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+<div class="text-center">
+  <h2>Editar Especialidade</h2>
+</div>
+<form
+  method="post"
+  class="d-flex flex-column align-items-center justify-content-center"
+  id="formEspecialidade"
+>
+  <div class="mb-3">
+    <label for="NomeEspecialidade">Nome especialidade:</label>
+    <input
+      type="text"
+      placeholder="Nome da especialidade"
+      required
+      class="form-control"
+      [(ngModel)]="especialidade.nome"
+      name="Nome"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="descricao">Descrição:</label>
+    <textarea
+      id="textarea"
+      name="descricao"
+      class="form-control"
+      [(ngModel)]="especialidade.descricao"
+      placeholder="Descrição da especialidade"
+    >
+    </textarea>
+  </div>
+  <div class="ativo d-flex align-self-center justify-content-center">
+    <label>Ativo:</label>
+    <input
+      ativo="ativo"
+      type="checkbox"
+      name="Ativo"
+      class="form-check-input ms-2"
+      [(ngModel)]="especialidade.ativo"
+      required
+    />
+  </div>
+  <div
+    class="alert alert-light text-center"
+    role="alert"
+    *ngIf="mensagemSucesso"
+  >
+    Dados atualizados com sucesso!
+  </div>
+  <div
+    class="alert alert-danger text-center"
+    role="alert"
+    *ngIf="mensagemErro"
+  >
+    Erro ao atualizar! Verifique os dados e tente novamente.
+  </div>
+  <button
+    type="submit"
+    class="btn buttonPrincipal align-self-center"
+    (click)="atualizarEspecialidade(especialidade.idEspecialidade)"
+  >
+    Salvar
+  </button>
+</form>
 
+</div>

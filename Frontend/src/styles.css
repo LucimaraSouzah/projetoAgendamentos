@@ -34,6 +34,20 @@ body {
 .buttonPrincipal:hover {
   background-color: #036d6d;
   transition: background 0.5s;
-  color: #fff;
+  color: #fafafa;
   text-decoration: none;
+}
+
+.check {
+  width: 5px;
+  height: 5px;
+  background-image: url(./assets/check.svg);
+  background-repeat: no-repeat;
+}
+
+.notCheck {
+  width: 5px;
+  height: 5px;
+  background-image: url(./assets/not.svg);
+  background-repeat: no-repeat;
 }

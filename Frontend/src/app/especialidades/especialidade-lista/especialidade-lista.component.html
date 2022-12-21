@@ -8,39 +8,44 @@
   >
 </div>
 
-<table class="table table-secondary table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Especialidade</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Ativo</th>
-      <th class="col">Atualizar</th>
-      <th class="col">Deletar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let especialidade of listaEspecialidades">
-      <td>{{ especialidade.idEspecialidade }}</td>
-      <td>{{ especialidade.descricao }}</td>
-      <td [ngClass]="especialidade.ativo ? 'check' : 'notCheck'"></td>
-      <td>
-        <button
-          type="submit"
-          class="btn btn-danger"
-          (click)="atualizarEspecialidade(especialidade.idEspecialidade)"
-        >
-          Editar
-        </button>
-      </td>
-      <td>
-        <button
-          type="submit"
-          class="btn btn-primary"
-          (click)="removerEspecialidade(especialidade.idEspecialidade)"
-        >
-          Deletar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-secondary">
+    <thead>
+      <tr class="table-dark">
+        <th>#</th>
+        <th>Especialidade</th>
+        <th>Descrição</th>
+        <th>Ativo</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let especialidade of listaEspecialidades">
+        <td>{{ especialidade.idEspecialidade }}</td>
+        <td>{{ especialidade.nome }}</td>
+        <td>{{ especialidade.descricao }}</td>
+        <td [ngClass]="especialidade.ativo ? 'check' : 'notCheck'"></td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="editarEspecialidade(especialidade.idEspecialidade)"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="removerEspecialidade(especialidade.idEspecialidade)"
+          >
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

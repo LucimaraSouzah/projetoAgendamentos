@@ -43,7 +43,7 @@ export class EditarProfissionalComponent {
     }
   }
 
-  atualizarProfissional(id:number) {
+  editarProfissional(id:number) {
     this.http.put(
       `https://localhost:7206/api/Profissional/${id}`,
       this.profissional

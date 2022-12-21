@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProfissionalDto } from '../../interfaces/IProfissionalDto';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -60,6 +60,7 @@ export class CadastrarProfissionalComponent implements OnInit {
           .patch('https://localhost:7206/api/Profissional', this.profissional)
           .subscribe((data) => {
             this.router.navigate(['listaProfissional']);
+            this.router.navigate(['listaProfissional']);
           });
       }
     } else {
@@ -77,7 +78,6 @@ export class CadastrarProfissionalComponent implements OnInit {
     ) {
       return false;
     }
-    // VALIDAR COM REGEX
     return true;
   }
 }
