@@ -31,7 +31,8 @@ import { CommonModule } from '@angular/common';
     EspecialidadeEditarComponent,
     CadastrarProfissionalComponent,
     ProfissionalEditarComponent,
-    ListaProfissionalComponent
+    ListaProfissionalComponent,
+    HospitalCadastrarComponent
   ],
   imports: [
     BrowserModule,

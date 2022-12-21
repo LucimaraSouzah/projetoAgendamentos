@@ -11,9 +11,12 @@
       </button></a
     >
   </div>
-  <table class="table table-secondary table-hover">
+  </div>
+
+  <div class="table-responsive">
+  <table class="table table-secondary">
     <thead>
-      <tr>
+      <tr class="table-dark">
         <th scope="col">Id</th>
         <th scope="col">Nome</th>
         <th scope="col">Telefone</th>
@@ -25,11 +28,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let profissional of listaProfissional">
-        <td>{{ profissional.idProfissional }}</td>
+        <th scope="row">{{ profissional.idProfissional }}</th>
         <td>{{ profissional.nome }}</td>
         <td>{{ profissional.telefone }}</td>
         <td>{{ profissional.endereco }}</td>
-        <td>{{ profissional.ativo }}</td>
+        <td [ngClass]="profissional.ativo ? 'check' : 'notCheck'"></td>
         <td>
           <button
             type="submit"
@@ -50,7 +53,5 @@
         </td>
       </tr>
     </tbody>
-
-    <tr></tr>
   </table>
 </div>
