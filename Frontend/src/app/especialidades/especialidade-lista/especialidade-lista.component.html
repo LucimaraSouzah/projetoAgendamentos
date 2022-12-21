@@ -14,13 +14,15 @@
       <th scope="col">Especialidade</th>
       <th scope="col">Descrição</th>
       <th scope="col">Ativo</th>
+      <th class="col">Atualizar</th>
+      <th class="col">Deletar</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let especialidade of listaEspecialidades">
       <td>{{ especialidade.idEspecialidade }}</td>
       <td>{{ especialidade.descricao }}</td>
-      <td>{{ especialidade.ativo }}</td>
+      <td [ngClass]="especialidade.ativo ? 'check' : 'notCheck'"></td>
       <td>
         <button
           type="submit"

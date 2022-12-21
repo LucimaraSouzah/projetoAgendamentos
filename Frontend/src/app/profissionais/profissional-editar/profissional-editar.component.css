@@ -1,20 +1,25 @@
+#profissionalContainer {
+  width: 100%;
+  height: 100%;
+}
+
 .buttonPrincipal {
   margin-bottom: 20px;
 }
 
-#formBeneficiario {
+#formProfissional {
   width: 90%;
 }
 
-#formBeneficiario div {
+#formProfissional div {
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  #beneficiarioContainer {
+  #profissionalContainer {
     height: 88vh;
   }
-  #formBeneficiario {
+  #formProfissional {
     width: 40%;
   }
 }
