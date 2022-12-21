@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class ListaEspecialidadeComponent {
   listaEspecialidades: IEspecialidadeDto[] = [];
 
+  imageCheck = '../../../assets/check.svg';
+  imageNotCheck = '/assets/not.svg';
+
   constructor(private http: HttpClient, private router: Router){
     this.listarEspecialidades()
   }
@@ -31,7 +34,7 @@ export class ListaEspecialidadeComponent {
     });
   }
 
-  atualizarEspecialidade(id: number) {
+  editarEspecialidade(id: number) {
     this.router.navigate([`editarEspecialidade/${id}`]);
   }
 

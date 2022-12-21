@@ -1,0 +1,26 @@
+#formEspecialidade {
+  width: 90%;
+}
+
+#formEspecialidade div {
+  width: 100%;
+}
+
+.ativo
+{
+  display: flex;
+  padding: 5px;
+
+}
+.buttonPrincipal{
+  width: 15em;
+}
+
+@media screen and (min-width: 768px) {
+  #especialidadeContainer {
+    height: 88vh;
+  }
+  #formEspecialidade {
+    width: 40%;
+  }
+}

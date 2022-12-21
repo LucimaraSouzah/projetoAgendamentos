@@ -20,7 +20,6 @@
           value="profissional.nome"
         />
       </div>
-
     </div>
     <div class="d-flex flex-column flex-lg-row mb-3">
       <div>
@@ -44,8 +43,7 @@
         />
       </div>
     </div>
-
-    <!-- <div class="d-flex align-items-center justify-content-center m-2">
+    <div class="d-flex align-items-center justify-content-center m-2">
       <label>Ativo:</label>
       <input
         ativo="ativo"
@@ -55,22 +53,26 @@
         [(ngModel)]="profissional.ativo"
         required
       />
-    </div> -->
+    </div>
     <div
       class="alert alert-light text-center"
       role="alert"
       *ngIf="mensagemSucesso"
     >
-      Cadastro realizado com sucesso!
+      Dados atualizados com sucesso!
     </div>
     <div
       class="alert alert-danger text-center"
       role="alert"
       *ngIf="mensagemErro"
     >
-      Erro ao cadastrar! Verifique os dados e tente novamente.
+      Erro ao atualizar seus dados! Verifique e tente novamente.
     </div>
-    <button type="submit" class="btn buttonPrincipal" (click)="atualizarProfissional(profissional.idProfissional)">
+    <button
+      type="submit"
+      class="btn buttonPrincipal"
+      (click)="editarProfissional(profissional.idProfissional)"
+    >
       Enviar
     </button>
   </form>
