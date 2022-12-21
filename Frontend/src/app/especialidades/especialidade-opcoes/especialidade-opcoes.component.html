@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+<div>
+  <h2>Especialidades cadastradas no Sistema</h2>
+  <a href="#"
+  ><button type="submit" class="buttonPrincipal">Cadastrar Especialidade</button></a>
+</div>
+
+<table class="table table-secondary table-hover">
+  <thead>
+    <tr>
+      <th  scope="col">Especialidade</th>
+      <th  scope="col">Descrição</th>
+      <th  scope="col">Ativo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let especialidade of listaEspecialidades">
+      <td>{{ especialidade.idEspecialidade }}</td>
+      <td>{{ especialidade.descricao }}</td>
+      <td>{{ especialidade.ativo }}</td>
+      <td>
+        <button
+          type="submit"
+          class="btn btn-danger"
+
+        >
+          Editar
+        </button>
+      </td>
+      <td>
+        <button
+          type="submit"
+          class="btn btn-primary"
+        
+        >
+          Deletar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

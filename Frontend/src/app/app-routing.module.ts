@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
 import { BeneficiarioComponent } from './beneficiarios/beneficiario/beneficiario.component';
 import { ProfissionalComponent } from './profissional/profissional.component';
-import { EspecialidadeComponent } from './especialidade/especialidade.component';
+import { EspecialidadeComponent } from './especialidades/especialidade/especialidade.component';
 import { OpcoesComponent } from './beneficiarios/beneficiario-opcoes/beneficiario-opcoes.component';
 
 const routes: Routes = [
