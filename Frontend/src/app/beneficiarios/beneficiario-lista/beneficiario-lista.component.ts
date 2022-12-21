@@ -2,7 +2,6 @@ import { IBeneficiarioDto } from '../../interfaces/IBeneficiarioDto';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { map } from 'rxjs';
 
 @Component({
   selector: 'app-lista',
@@ -11,6 +10,9 @@ import { map } from 'rxjs';
 })
 export class ListaBeneficiarioComponent {
   listaBeneficiarios: IBeneficiarioDto[] = [];
+
+  imageCheck = '../../../assets/check.svg';
+  imageNotCheck = '/assets/not.svg';
 
   constructor(private http: HttpClient, private router: Router) {
     this.listarTodos();
@@ -24,21 +26,6 @@ export class ListaBeneficiarioComponent {
       });
   }
 
-  // detalhar(id: number) {
-  //   this.telaParaApresentar = 'detalhe';
-
-  //   for (let i = 0; i < this.listaAlunos.length; i++) {
-  //     if (id == this.listaAlunos[i].id) {
-  //       this.alunoSelecionado = this.listaAlunos[i];
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // fecharDetalhes = () => {
-  //   this.telaParaApresentar = 'lista';
-  // }
-
   removerBeneficiario(id: number) {
     this.http
       .delete(`https://localhost:7206/api/Beneficiario/${id}`)
@@ -47,11 +34,7 @@ export class ListaBeneficiarioComponent {
       });
   }
 
-  atualizarBeneficiario(id: number) {
+  editarBeneficiario(id: number) {
     this.router.navigate([`editarBeneficiario/${id}`]);
   }
-
-  // adicionarAluno(){
-  //   this.router.navigate([`editarAluno`]);
-  // }
 }

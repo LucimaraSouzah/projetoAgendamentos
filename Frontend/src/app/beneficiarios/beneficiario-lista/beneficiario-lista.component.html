@@ -7,42 +7,45 @@
     <h2>Beneficiários cadastrados no sistema</h2>
     <a href="cadastrarBeneficiario"
       ><button type="submit" class="btn buttonPrincipal mb-4">
-        Cadastrar novo
+        Cadastrar
       </button></a
     >
   </div>
-  <table class="table table-secondary table-hover">
+</div>
+
+<div class="table-responsive">
+  <table class="table table-secondary">
     <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nome</th>
-        <th scope="col">CPF</th>
-        <th scope="col">Telefone</th>
-        <th scope="col">Endereço</th>
-        <th scope="col">Nº Carteirinha</th>
-        <th scope="col">Ativo</th>
-        <th scope="col">E-mail</th>
-        <th scope="col">Senha</th>
-        <th scope="col">Atualizar</th>
-        <th scope="col">Deletar</th>
+      <tr class="table-dark">
+        <th>#</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Nº Carteirinha</th>
+        <th>Ativo</th>
+        <th>E-mail</th>
+        <th>Senha</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let beneficiario of listaBeneficiarios">
-        <td>{{ beneficiario.idBeneficiario }}</td>
+        <th scope="row">{{ beneficiario.idBeneficiario }}</th>
         <td>{{ beneficiario.nome }}</td>
         <td>{{ beneficiario.cpf }}</td>
         <td>{{ beneficiario.telefone }}</td>
         <td>{{ beneficiario.endereco }}</td>
         <td>{{ beneficiario.numeroCarteirinha }}</td>
-        <td>{{ beneficiario.ativo }}</td>
+        <td [ngClass]="beneficiario.ativo ? 'check' : 'notCheck'"></td>
         <td>{{ beneficiario.email }}</td>
         <td>{{ beneficiario.senha }}</td>
         <td>
           <button
             type="submit"
             class="btn btn-danger"
-            (click)="atualizarBeneficiario(beneficiario.idBeneficiario)"
+            (click)="editarBeneficiario(beneficiario.idBeneficiario)"
           >
             Editar
           </button>
@@ -58,7 +61,5 @@
         </td>
       </tr>
     </tbody>
-
-    <tr></tr>
   </table>
 </div>
