@@ -8,7 +8,7 @@ import { IProfissionalDto } from '../../interfaces/IProfissionalDto';
   templateUrl: './profissional-editar.component.html',
   styleUrls: ['./profissional-editar.component.css'],
 })
-export class ProfissionalEditarComponent {
+export class EditarProfissionalComponent {
   profissional!: IProfissionalDto;
   idProfissional!: number;
 
