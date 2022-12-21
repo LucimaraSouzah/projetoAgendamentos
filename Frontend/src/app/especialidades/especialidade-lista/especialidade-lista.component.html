@@ -1,46 +1,55 @@
 <app-nav></app-nav>
-<div>
-  <h2>Especialidades cadastradas no Sistema</h2>
-  <a href="cadastrarEspecialidade"
-    ><button type="submit" class="buttonPrincipal">
-      Cadastrar Especialidade
-    </button></a
-  >
+<div
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+  <div class="text-center">
+    <h2>Especialidades cadastradas no Sistema</h2>
+    <a href="cadastrarEspecialidade"
+      ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
+        Cadastrar
+      </button></a
+    >
+  </div>
 </div>
+<div class="table-responsive">
+  <table class="table table-secondary">
+    <thead>
+      <tr class="table-dark">
+        <th>#</th>
+        <th>Especialidade</th>
+        <th>Descrição</th>
+        <th>Ativo</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let especialidade of listaEspecialidades">
+        <td>{{ especialidade.idEspecialidade }}</td>
+        <td>{{ especialidade.nome }}</td>
+        <td>{{ especialidade.descricao }}</td>
+        <td [ngClass]="especialidade.ativo ? 'check' : 'notCheck'"></td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="editarEspecialidade(especialidade.idEspecialidade)"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="removerEspecialidade(especialidade.idEspecialidade)"
+          >
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<table class="table table-secondary table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Especialidade</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Ativo</th>
-      <th class="col">Atualizar</th>
-      <th class="col">Deletar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let especialidade of listaEspecialidades">
-      <td>{{ especialidade.idEspecialidade }}</td>
-      <td>{{ especialidade.descricao }}</td>
-      <td [ngClass]="especialidade.ativo ? 'check' : 'notCheck'"></td>
-      <td>
-        <button
-          type="submit"
-          class="btn btn-danger"
-          (click)="atualizarEspecialidade(especialidade.idEspecialidade)"
-        >
-          Editar
-        </button>
-      </td>
-      <td>
-        <button
-          type="submit"
-          class="btn btn-primary"
-          (click)="removerEspecialidade(especialidade.idEspecialidade)"
-        >
-          Deletar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+</div>

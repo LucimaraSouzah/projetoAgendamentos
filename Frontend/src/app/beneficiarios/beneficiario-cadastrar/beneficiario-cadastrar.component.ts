@@ -82,7 +82,6 @@ export class CadastrarBeneficiarioComponent implements OnInit {
     ) {
       return false;
     }
-    // VALIDAR COM REGEX
     return true;
   }
 }
