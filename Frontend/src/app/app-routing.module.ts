@@ -1,3 +1,4 @@
+import { ProfissionalEditarComponent } from './profissionais/profissional-editar/profissional-editar.component';
 import { EspecialidadeEditarComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,7 +10,9 @@ import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar
 import { CadastrarBeneficiarioComponent } from './beneficiarios/beneficiario-cadastrar/beneficiario-cadastrar.component';
 import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/beneficiario-lista.component';
 
-import { ProfissionalComponent } from './profissional/profissional.component';
+import { CadastrarProfissionalComponent } from './profissionais/profissional-cadastrar/profissional-cadastrar.component';
+import { ListaProfissionalComponent } from './profissionais/profissional-lista/profissional-lista.component';
+
 import { CadastrarEspecialidadeComponent } from './especialidades/especialidade-cadastrar/especialidade-cadastrar.component';
 import { ListaEspecialidadeComponent } from './especialidades/especialidade-lista/especialidade-lista.component';
 import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
@@ -22,6 +25,11 @@ const routes: Routes = [
   { path: 'editarBeneficiario', component: BeneficiarioEditarComponent },
   { path: 'editarBeneficiario/:id', component: BeneficiarioEditarComponent },
 
+  { path: 'cadastrarProfissional', component: CadastrarProfissionalComponent},
+  { path: 'listaProfissional', component: ListaProfissionalComponent },
+  { path: 'editarProfissional', component: ProfissionalEditarComponent},
+  { path: 'editarProfissional/:id', component: ProfissionalEditarComponent},
+
   { path: 'cadastrarEspecialidade', component: CadastrarEspecialidadeComponent },
   { path: 'listaEspecialidade', component: ListaEspecialidadeComponent },
   { path: 'editarEspecialidade', component: EspecialidadeEditarComponent },
@@ -29,7 +37,8 @@ const routes: Routes = [
 
   { path: 'cadastrarHospital', component: HospitalCadastrarComponent },
 
-  // { path: 'listaProfissional', component: ListaProfissionalComponent },
+  { path: 'cadastrarHospital', component: HospitalCadastrarComponent },
+
 ];
 
 @NgModule({

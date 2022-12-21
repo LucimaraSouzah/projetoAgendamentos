@@ -1,0 +1,56 @@
+<app-nav></app-nav>
+<div
+  id="profissionalContainer"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+  <div class="text-center">
+    <h2>Profissionais cadastrados no sistema</h2>
+    <a href="cadastrarProfissional"
+      ><button type="submit" class="btn buttonPrincipal mb-4">
+        Cadastrar
+      </button></a
+    >
+  </div>
+  <table class="table table-secondary table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Ativo</th>
+        <th scope="col">Atualizar</th>
+        <th scope="col">Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profissional of listaProfissional">
+        <td>{{ profissional.idProfissional }}</td>
+        <td>{{ profissional.nome }}</td>
+        <td>{{ profissional.telefone }}</td>
+        <td>{{ profissional.endereco }}</td>
+        <td>{{ profissional.ativo }}</td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="atualizarProfissional(profissional.idProfissional)"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="removerProfissional(profissional.idProfissional)"
+          >
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+    <tr></tr>
+  </table>
+</div>
