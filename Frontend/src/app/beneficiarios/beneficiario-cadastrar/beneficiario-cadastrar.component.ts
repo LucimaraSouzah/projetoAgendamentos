@@ -4,7 +4,7 @@ import { IBeneficiarioDto } from '../../interfaces/IBeneficiarioDto';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-beneficiario',
+  selector: 'app-cadastrarBeneficiario',
   templateUrl: './beneficiario-cadastrar.component.html',
   styleUrls: ['./beneficiario-cadastrar.component.css'],
 })
