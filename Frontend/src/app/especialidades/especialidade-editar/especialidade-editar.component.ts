@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './especialidade-editar.component.html',
   styleUrls: ['./especialidade-editar.component.css']
 })
-export class EspecialidadeEditarComponent {
+export class EditarEspecialidadeComponent {
   especialidade!: IEspecialidadeDto;
   idEspecialidade!: number;
 

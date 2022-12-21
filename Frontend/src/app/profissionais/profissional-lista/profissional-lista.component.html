@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+<div
+  id="profissionalContainer"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+  <div class="text-center">
+    <h2>Profissionais cadastrados no sistema</h2>
+    <a href="cadastrarProfissional"
+      ><button type="submit" class="btn buttonPrincipal mb-4">
+        Cadastrar
+      </button></a
+    >
+  </div>
+  </div>
+
+  <div class="table-responsive">
+  <table class="table table-secondary">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Ativo</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profissional of listaProfissionais">
+        <th scope="row">{{ profissional.idProfissional }}</th>
+        <td>{{ profissional.nome }}</td>
+        <td>{{ profissional.telefone }}</td>
+        <td>{{ profissional.endereco }}</td>
+        <td [ngClass]="profissional.ativo ? 'check' : 'notCheck'"></td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="editarProfissional(profissional.idProfissional)"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="removerProfissional(profissional.idProfissional)"
+          >
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

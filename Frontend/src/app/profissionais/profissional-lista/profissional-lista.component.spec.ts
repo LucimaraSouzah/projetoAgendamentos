@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaBeneficiarioComponent } from './beneficiario-lista.component';
+import { ListaProfissionalComponent } from './profissional-lista.component';
 
 describe('OpcoesComponent', () => {
-  let component: ListaBeneficiarioComponent;
-  let fixture: ComponentFixture<ListaBeneficiarioComponent>;
+  let component: ListaProfissionalComponent;
+  let fixture: ComponentFixture<ListaProfissionalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaBeneficiarioComponent ]
+      declarations: [ ListaProfissionalComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ListaBeneficiarioComponent);
+    fixture = TestBed.createComponent(ListaProfissionalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

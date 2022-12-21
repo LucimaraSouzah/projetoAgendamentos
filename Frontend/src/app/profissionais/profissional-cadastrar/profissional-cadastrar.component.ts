@@ -1,22 +1,21 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { IProfissionalDto } from '../interfaces/IProfissionalDto';
+import { Component, OnInit } from '@angular/core';
+import { IProfissionalDto } from '../../interfaces/IProfissionalDto';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profissional',
-  templateUrl: './profissional.component.html',
-  styleUrls: ['./profissional.component.css'],
+  selector: 'app-profissional-cadastrar',
+  templateUrl: './profissional-cadastrar.component.html',
+  styleUrls: ['./profissional-cadastrar.component.css'],
 })
-export class ProfissionalComponent implements OnInit {
+export class CadastrarProfissionalComponent implements OnInit {
   profissional!: IProfissionalDto;
   idProfissional!: number;
 
   listaProfissionais: IProfissionalDto[] = [];
 
-  postar() {
-    console.log('Post efetuado!');
-  }
+  mensagemSucesso = false;
+  mensagemErro = false;
 
   constructor(
     private http: HttpClient,
@@ -31,9 +30,10 @@ export class ProfissionalComponent implements OnInit {
   ngOnInit(): void {
     this.profissional = {
       idProfissional: this.idProfissional ?? 0,
-      Nome: '',
-      Telefone: '',
-      Endereco: '',
+      nome: '',
+      telefone: '',
+      endereco: '',
+      ativo: false
     };
 
     if (this.idProfissional) {
@@ -45,40 +45,39 @@ export class ProfissionalComponent implements OnInit {
     }
   }
 
-  salvar() {
+  cadastrar() {
     if (this.validarInformacoes()) {
-      console.log(`Objeto para salvar: ${JSON.stringify(this.profissional)}`);
-
       if (this.profissional.idProfissional == 0) {
-
-
         this.http
           .post('https://localhost:7206/api/Profissional', this.profissional)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            console.log(data)
+            this.router.navigate(['listaProfissional']);
+            this.mensagemErro = false;
+            this.mensagemSucesso = true;
           });
       } else {
         this.http
           .patch('https://localhost:7206/api/Profissional', this.profissional)
           .subscribe((data) => {
-            this.router.navigate(['listaalunos']);
+            this.router.navigate(['listaProfissional']);
           });
       }
     } else {
-      console.log('Erro na validação');
-      // TRATAMENTO DE ERRO
-      // ALERTA
-      // BORDA VERMELHA
+      this.mensagemSucesso = false;
+      this.mensagemErro = true;
     }
   }
 
   validarInformacoes(): boolean {
-    if (this.profissional.Nome == '') {
+    if (
+      this.profissional.nome == '' ||
+      this.profissional.telefone == '' ||
+      this.profissional.endereco == ''
+
+    ) {
       return false;
     }
-
-    // VALIDAR COM REGEX
-
     return true;
   }
 }
