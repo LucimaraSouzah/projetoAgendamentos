@@ -1,1 +1,91 @@
-<p>hospital-editar works!</p>
+<app-nav></app-nav>
+<div
+id="container"
+class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+<div class ="text-center">
+  <h2> Edite os dados do hospital</h2>
+</div>
+<form method="post" class="d-flex flex-column" id="formBeneficiario">
+  <div class="d-flex flex-column flex-lg-row mb-3">
+    <div>
+      <label for="Nome">Nome:</label>
+      <input
+        type="text"
+        placeholder="nome"
+        required
+        class="form-control"
+        name="Nome"
+      />
+    </div>
+    <div class="ms-lg-3">
+      <label for="CNPJ">CNPJ:</label>
+      <input
+        type="text"
+        placeholder="CNPJ"
+        required
+        class="form-control"
+        name="CNPJ"
+      />
+    </div>
+    <div class="ms-lg-3">
+      <label for="Endereço">Endereço:</label>
+      <input
+        type="text"
+        placeholder="Endereço"
+        required
+        class="form-control"
+        name="Endereço"
+      />
+    </div>
+    <div class="ms-lg-3">
+      <label for="Telefone">Telefone:</label>
+      <input
+        type="text"
+        placeholder="Telefone"
+        required
+        class="form-control"
+        name="Telefone"
+      />
+    </div>
+  </div>
+  <div class="d-flex flex-column flex-lg-row mb-3">
+    <div>
+      <label for="Especialidade">Especialidade:</label>
+      <input
+        type="text"
+        placeholder="Especialidade"
+        required
+        class="form-control"
+        name="Especialidade"
+      />
+    </div>
+    <div class="ms-lg-3">
+      <label for="CNES">CNES:</label>
+      <input
+        type="text"
+        placeholder="CNES"
+        required
+        class="form-control"
+        name="CNES"
+      />
+    </div>
+  </div>
+  <div class="alert alert-light text-center">
+       role="alert"
+       *ngIf="mensagemSucesso"
+   >
+      Dados Atualizados com Sucesso!
+    </div>
+     <div
+     class="alert alert-danger texte-center"
+     role="alert"
+     *ngIf="mensagemErro "
+    Erro ao ediatar o Hospital! Verifique e tente novamente. >
+    </div>
+   <button type="submit" class="btn buttonPrincipal" (click)="editar()">
+    Salvar
+  </button>
+  </form>
+  </div>
+

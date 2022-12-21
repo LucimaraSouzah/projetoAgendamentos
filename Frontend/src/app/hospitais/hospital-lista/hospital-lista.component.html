@@ -1,1 +1,47 @@
-<p>hospital-lista works!</p>
+<app-nav></app-nav>
+<div
+id="hospitalContainer"
+class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+<div class="text-center">
+  <h2> Liste os dados do hospital</h2>
+  <hr href="listarHospital"
+  ><button button type="submit" class="btn buttonPrincipal mb-4">
+  Listar
+  </button>button>
+  >
+</div>
+
+<div class=" table-responsive">
+  <table class="table table-secondary">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">CNPJ</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">Especialidade</th>
+      </tr>
+    </thead>
+    <button>
+      <tr *ngFor="let hospital of hospitais">
+        <td>{{ hospital.nome }}</td>
+        <td>{{ hospital.cnpj }}</td>
+        <td>{{ hospital.endereco }}</td>
+        <td>{{ hospital.telefone }}</td>
+        <td>{{ hospital.especialidade }}</td>
+      </tr>
+      <button
+      type="submit"
+      class="btn btn-danger"
+      (click)="listarHospital(hospital.idhospital)"
+      >
+    Listar
+    </button>
+  <button>
+      type="submit"
+      class="btn btn-primary"
+      (click)="removerHospital(hospital.idhospital)"
+    </button>
+
+
