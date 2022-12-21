@@ -55,7 +55,7 @@ export class CadastrarBeneficiarioComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['opcoes']);
+            this.router.navigate(['listaBeneficiario']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -63,7 +63,7 @@ export class CadastrarBeneficiarioComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Beneficiario', this.beneficiario)
           .subscribe((data) => {
-            this.router.navigate(['opcoes']);
+            this.router.navigate(['listaBeneficiario']);
           });
       }
     } else {
