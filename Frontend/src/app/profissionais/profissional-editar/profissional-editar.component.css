@@ -1,0 +1,25 @@
+#profissionalContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.buttonPrincipal {
+  margin-bottom: 20px;
+}
+
+#formProfissional {
+  width: 90%;
+}
+
+#formProfissional div {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #profissionalContainer {
+    height: 88vh;
+  }
+  #formProfissional {
+    width: 40%;
+  }
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfissionalComponent } from './profissional.component';
+import { OpcoesComponent } from './profissional-lista.component';
 
-describe('ProfissionalComponent', () => {
-  let component: ProfissionalComponent;
-  let fixture: ComponentFixture<ProfissionalComponent>;
+describe('OpcoesComponent', () => {
+  let component: OpcoesComponent;
+  let fixture: ComponentFixture<OpcoesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfissionalComponent ]
+      declarations: [ OpcoesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProfissionalComponent);
+    fixture = TestBed.createComponent(OpcoesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

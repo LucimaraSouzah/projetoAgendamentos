@@ -1,3 +1,5 @@
+import { ProfissionalEditarComponent } from './profissionais/profissional-editar/profissional-editar.component';
+import { ListaProfissionalComponent } from './profissionais/profissional-lista/profissional-lista.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,14 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastrarBeneficiarioComponent } from './beneficiarios/beneficiario-cadastrar/beneficiario-cadastrar.component';
 import { NavComponent } from './nav/nav.component';
-import { ProfissionalComponent } from './profissional/profissional.component';
-import { CommonModule } from '@angular/common';
+import { CadastrarProfissionalComponent } from './profissionais/profissional-cadastrar/profissional-cadastrar.component';
 import { CadastrarEspecialidadeComponent } from './especialidades/especialidade-cadastrar/especialidade-cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/beneficiario-lista.component';
 import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
 import { ListaEspecialidadeComponent } from './especialidades/especialidade-lista/especialidade-lista.component';
 import { EspecialidadeEditarComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,14 +28,16 @@ import { EspecialidadeEditarComponent } from './especialidades/especialidade-edi
     CadastrarEspecialidadeComponent,
     ListaEspecialidadeComponent,
     EspecialidadeEditarComponent,
-    ProfissionalComponent,
+    CadastrarProfissionalComponent,
+    ListaProfissionalComponent,
+    ProfissionalEditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
