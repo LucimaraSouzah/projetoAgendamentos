@@ -27,11 +27,11 @@ import { CommonModule } from '@angular/common';
     ListaBeneficiarioComponent,
     BeneficiarioEditarComponent,
     CadastrarEspecialidadeComponent,
-    CadastrarProfissionalComponent,
     ListaEspecialidadeComponent,
     EspecialidadeEditarComponent,
-
-
+    CadastrarProfissionalComponent,
+    ProfissionalEditarComponent,
+    ListaProfissionalComponent
   ],
   imports: [
     BrowserModule,
