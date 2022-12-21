@@ -15,8 +15,10 @@ import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/b
 import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
 import { ListaEspecialidadeComponent } from './especialidades/especialidade-lista/especialidade-lista.component';
 import { EspecialidadeEditarComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
-import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
+import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 import { CommonModule } from '@angular/common';
+import { HospitalListaComponent } from './hospitais/hospital-lista/hospital-lista.component';
+import { HospitalEditarComponent } from './hospitais/hospital-editar/hospital-editar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import { CommonModule } from '@angular/common';
     EspecialidadeEditarComponent,
     CadastrarProfissionalComponent,
     ProfissionalEditarComponent,
-    ListaProfissionalComponent
+    ListaProfissionalComponent,
+    CadastrarHospitalComponent,
+    HospitalListaComponent,
+    HospitalEditarComponent,
   ],
   imports: [
     BrowserModule,
