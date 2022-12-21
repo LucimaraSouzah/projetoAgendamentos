@@ -21,7 +21,7 @@ import { ListaProfissionalComponent } from './profissionais/profissional-lista/p
 import { CadastrarProfissionalComponent } from './profissionais/profissional-cadastrar/profissional-cadastrar.component';
 import { EditarProfissionalComponent } from './profissionais/profissional-editar/profissional-editar.component';
 
-import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
+import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospi
     CadastrarProfissionalComponent,
     EditarProfissionalComponent,
     ListaProfissionalComponent,
-    HospitalCadastrarComponent,
+    CadastrarHospitalComponent,
   ],
   imports: [
     BrowserModule,

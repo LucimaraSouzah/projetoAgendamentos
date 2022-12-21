@@ -8,7 +8,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
   templateUrl: './hospital-cadastrar.component.html',
   styleUrls: ['./hospital-cadastrar.component.css']
 })
-export class HospitalCadastrarComponent implements OnInit{
+export class CadastrarHospitalComponent implements OnInit{
   [x: string]: any;
   hospital!: IHospitalDto;
   idHospital!: number;

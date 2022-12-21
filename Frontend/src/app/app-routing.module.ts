@@ -16,7 +16,7 @@ import { ListaEspecialidadeComponent } from './especialidades/especialidade-list
 import { CadastrarEspecialidadeComponent } from './especialidades/especialidade-cadastrar/especialidade-cadastrar.component';
 import { EditarEspecialidadeComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
 
-import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
+import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'editarEspecialidade', component: EditarEspecialidadeComponent },
   { path: 'editarEspecialidade/:id', component: EditarEspecialidadeComponent },
 
-  { path: 'cadastrarHospital', component: HospitalCadastrarComponent },
+  { path: 'cadastrarHospital', component: CadastrarHospitalComponent },
 
 ];
 
