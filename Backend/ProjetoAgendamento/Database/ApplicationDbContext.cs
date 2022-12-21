@@ -80,7 +80,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Hospital>(entity =>
         {
-            entity.HasKey(e => e.IdHospital).HasName("PK__Hospital__AF70C2B21DE896E");
+            entity.HasKey(e => e.IdHospital).HasName("PK__Hospital__AF70C2B217DE896E");
 
         });
 
