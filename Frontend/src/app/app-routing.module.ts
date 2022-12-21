@@ -12,6 +12,7 @@ import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/b
 import { ProfissionalComponent } from './profissional/profissional.component';
 import { CadastrarEspecialidadeComponent } from './especialidades/especialidade-cadastrar/especialidade-cadastrar.component';
 import { ListaEspecialidadeComponent } from './especialidades/especialidade-lista/especialidade-lista.component';
+import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -25,6 +26,8 @@ const routes: Routes = [
   { path: 'listaEspecialidade', component: ListaEspecialidadeComponent },
   { path: 'editarEspecialidade', component: EspecialidadeEditarComponent },
   { path: 'editarEspecialidade/:id', component: EspecialidadeEditarComponent },
+
+  { path: 'cadastrarHospital', component: HospitalCadastrarComponent },
 
   // { path: 'listaProfissional', component: ListaProfissionalComponent },
 ];
