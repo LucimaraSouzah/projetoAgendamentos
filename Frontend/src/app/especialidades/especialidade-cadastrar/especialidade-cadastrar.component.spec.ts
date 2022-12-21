@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EspecialidadeComponent } from './especialidade-cadastrar.component';
+import { CadastrarEspecialidadeComponent } from './especialidade-cadastrar.component';
 
 describe('EspecialidadeComponent', () => {
-  let component: EspecialidadeComponent;
-  let fixture: ComponentFixture<EspecialidadeComponent>;
+  let component: CadastrarEspecialidadeComponent;
+  let fixture: ComponentFixture<CadastrarEspecialidadeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EspecialidadeComponent ]
+      declarations: [ CadastrarEspecialidadeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EspecialidadeComponent);
+    fixture = TestBed.createComponent(CadastrarEspecialidadeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

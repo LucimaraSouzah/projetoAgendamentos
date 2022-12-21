@@ -8,7 +8,7 @@ import { IBeneficiarioDto } from '../../interfaces/IBeneficiarioDto';
   templateUrl: './beneficiario-editar.component.html',
   styleUrls: ['./beneficiario-editar.component.css'],
 })
-export class BeneficiarioEditarComponent {
+export class EditarBeneficiarioComponent {
   beneficiario!: IBeneficiarioDto;
   idBeneficiario!: number;
 
