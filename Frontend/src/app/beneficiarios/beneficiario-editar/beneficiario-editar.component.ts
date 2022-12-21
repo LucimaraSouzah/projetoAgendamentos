@@ -53,7 +53,7 @@ export class BeneficiarioEditarComponent {
       this.beneficiario
     )
     .subscribe((data) => {
-      this.router.navigate(['opcoes']);
+      this.router.navigate(['listaBeneficiario']);
       this.mensagemErro = false;
       this.mensagemSucesso = true;
     }
