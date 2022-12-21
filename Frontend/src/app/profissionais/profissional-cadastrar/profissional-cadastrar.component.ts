@@ -51,7 +51,7 @@ export class CadastrarProfissionalComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Profissional', this.profissional)
           .subscribe((data) => {
-            this.router.navigate(['profissional-lista']);
+            this.router.navigate(['listaProfissional']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -59,7 +59,7 @@ export class CadastrarProfissionalComponent implements OnInit {
         this.http
           .patch('https://localhost:7206/api/Profissional', this.profissional)
           .subscribe((data) => {
-            this.router.navigate(['profissional-lista']);
+            this.router.navigate(['listaProfissional']);
           });
       }
     } else {
