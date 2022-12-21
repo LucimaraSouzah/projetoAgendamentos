@@ -3,3 +3,17 @@
   transition: background 0.5s;
   color: #fafafa;
 }
+
+.check {
+  width: 5px;
+  height: 5px;
+  background-image: url(../../../assets/check.svg);
+  background-repeat: no-repeat;
+}
+
+.notCheck {
+  width: 5px;
+  height: 5px;
+  background-image: url(../../../assets/not.svg);
+  background-repeat: no-repeat;
+}

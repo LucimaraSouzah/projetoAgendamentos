@@ -15,6 +15,7 @@ import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/b
 import { BeneficiarioEditarComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
 import { ListaEspecialidadeComponent } from './especialidades/especialidade-lista/especialidade-lista.component';
 import { EspecialidadeEditarComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
+import { HospitalCadastrarComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -26,11 +27,11 @@ import { CommonModule } from '@angular/common';
     ListaBeneficiarioComponent,
     BeneficiarioEditarComponent,
     CadastrarEspecialidadeComponent,
+    CadastrarProfissionalComponent,
     ListaEspecialidadeComponent,
     EspecialidadeEditarComponent,
-    CadastrarProfissionalComponent,
-    ListaProfissionalComponent,
-    ProfissionalEditarComponent
+
+
   ],
   imports: [
     BrowserModule,
