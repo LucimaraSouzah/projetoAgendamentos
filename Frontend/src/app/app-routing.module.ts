@@ -1,3 +1,4 @@
+import { EspecialidadeEditarComponent } from './especialidades/especialidade-editar/especialidade-editar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -22,8 +23,10 @@ const routes: Routes = [
 
   { path: 'cadastrarEspecialidade', component: CadastrarEspecialidadeComponent },
   { path: 'listaEspecialidade', component: ListaEspecialidadeComponent },
+  { path: 'editarEspecialidade', component: EspecialidadeEditarComponent },
+  { path: 'editarEspecialidade/:id', component: EspecialidadeEditarComponent },
 
-  { path: 'profissional', component: ProfissionalComponent },
+  // { path: 'listaProfissional', component: ListaProfissionalComponent },
 ];
 
 @NgModule({

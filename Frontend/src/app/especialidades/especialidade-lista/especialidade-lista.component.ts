@@ -23,20 +23,21 @@ export class ListaEspecialidadeComponent {
     });
   }
 
-}
-/*btn html
-(click)="atualizarEspecialidade(especialidade.idEspecialidade)"
-(click)="removerEspecialidade(especialidade.idEspecialidade)"
+  removerEspecialidade(id: number){
+    this.http
+    .delete(`https://localhost:7206/api/Especialidade/${id}`)
+    .subscribe((data) => {
+      this.listarEspecialidades();
+    });
+  }
 
-removerEspecialidade(id: number){
-  this.http
-  .delete(`https://localhost:7206/api/Especialidade/${id}`)
-  .subscribe((data) => {
-    this.listarEspecialidades();
-  });
+  atualizarEspecialidade(id: number) {
+    this.router.navigate([`editarEspecialidade/${id}`]);
+  }
+
 }
 
-atualizarEspecialidade(id: number) {
-  this.router.navigate([`editarEspecialidade/${id}`]);
-}
-*/
+
+
+
+

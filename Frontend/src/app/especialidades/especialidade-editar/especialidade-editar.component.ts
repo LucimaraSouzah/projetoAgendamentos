@@ -48,7 +48,7 @@ export class EspecialidadeEditarComponent {
       this.especialidade
     )
     .subscribe((data) => {
-      this.router.navigate(['especialidade-opcoes']);
+      this.router.navigate(['especialidade-lista']);
       this.mensagemErro = false;
       this.mensagemSucesso = true;
     })
