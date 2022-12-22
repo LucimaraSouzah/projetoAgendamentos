@@ -22,8 +22,6 @@ import { ListaHospitalComponent } from './hospitais/hospital-lista/hospital-list
 import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 import { EditarHospitalComponent } from './hospitais/hospital-editar/hospital-editar.component';
 
-
-
 const routes: Routes = [
   { path: '', component: HomeComponent},
 
@@ -48,7 +46,6 @@ const routes: Routes = [
   { path: 'listaHospital', component: ListaHospitalComponent},
   { path: 'editarHospital', component: EditarHospitalComponent },
   { path: 'editarHospital/:id', component: EditarHospitalComponent },
-
 ];
 
 @NgModule({

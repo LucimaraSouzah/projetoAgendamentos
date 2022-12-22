@@ -28,12 +28,12 @@ class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
     </thead>
     <tbody>
       <tr *ngFor="let hospital of listaHospitais">
-        <th scope="row">{{ hospital.idBeneficiario }}</th>
+        <th scope="row">{{ hospital.idHospital }}</th>
         <td>{{ hospital.nome }}</td>
         <td>{{ hospital.cnpj }}</td>
         <td>{{ hospital.endereco }}</td>
         <td>{{ hospital.telefone }}</td>
-        <td>{{ hospital.especialidade }}</td>
+        <td>{{ hospital.cnes }}</td>
         <td [ngClass]="hospital.ativo ? 'check' : 'notCheck'"></td>
         <td>
           <button
