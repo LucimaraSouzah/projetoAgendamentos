@@ -9,25 +9,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./hospital-editar.component.css']
 })
 export class EditarHospitalComponent {
+[x: string]: any;
   hospital!: IHospitalDto;
   idHospital!: number;
+  route: any;
 
-  construtor(
+  constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
     private router: Router
 
   ) {
     this.route.paramMap.subscribe((params) => {
-      this.idHospital = Number(params.bet('id'));
+      this.idHospital = Number(params.get('id'));
     });
   }
 
-  ngOnInit(): void {
+  gOnInit(): void {
     this.hospital = {
       idHospital: this.idHospital ?? 0,
-      nome: '',
-      cnpj: '',
+      nome: '',cnpj: '',
       endereco: '',
       telefone: '',
       cnes: '',
