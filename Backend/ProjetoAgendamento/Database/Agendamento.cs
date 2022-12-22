@@ -24,6 +24,8 @@ public partial class Agendamento
     public int IdProfissional { get; set; }
 
     [Column(TypeName = "datetime")]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
     public DateTime DataHoraAgendamento { get; set; }
 
     [Column("idBeneficiario")]

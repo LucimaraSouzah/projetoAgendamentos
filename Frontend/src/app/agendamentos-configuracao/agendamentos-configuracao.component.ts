@@ -25,7 +25,6 @@ export class AgendamentosConfiguracaoComponent {
   mensagemSucesso = false;
   mensagemErro = false;
 
-
   ngOnInit(): void {
     this.agendamentoConfiguracao = {
       idConfiguracao: this.idAgendamentoConfiguracao ?? 0,
@@ -38,7 +37,7 @@ export class AgendamentosConfiguracaoComponent {
         idEspecialidade: 0,
         nome: '',
         descricao: '',
-        ativo: false
+        ativo: false,
       },
       idHospitalNavigation: {
         idHospital: 0,
@@ -74,6 +73,7 @@ export class AgendamentosConfiguracaoComponent {
         this.http
           .post('https://localhost:7206/api/AgendamentoConfiguracao', this.agendamentoConfiguracao)
           .subscribe((data) => {
+            console.log(data)
             this.router.navigate(['listaBeneficiario']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;

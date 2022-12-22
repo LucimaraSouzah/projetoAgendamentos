@@ -38,15 +38,16 @@
       </div>
     </div>
 
-    <div class="d-flex flex-column flex-lg-row mb-3">
+    <div class="d-flex flex-column mb-3">
       <label for="Nome">Data início e horário do atendimento:</label>
-      <input type="datetime-local" name="dataInicio" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioInicio" />
+      <input type="datetime" name="dataHorarioInicio" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioInicio"/>
     </div>
 
     <div class="d-flex flex-column mb-3">
       <label for="Nome">Data e horário final do atendimento:</label>
-      <input type="datetime-local" name="" id="" class="form-control" />
+      <input type="datetime" name="" id="" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioFim" name="dataHorarioFim"/>
     </div>
+
     <!-- <div class="ms-lg-3">
         <label for="Nome">Profissional:</label>
         <select class="form-select">

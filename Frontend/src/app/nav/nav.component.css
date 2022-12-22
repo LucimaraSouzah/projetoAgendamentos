@@ -14,3 +14,15 @@ nav {
   padding: 1.5em;
   padding-top: 1em;
 }
+
+@media screen and (max-width: 1000px) {
+    .icon-config {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+  .icon-config-sm {
+      display: none;
+  }
+}

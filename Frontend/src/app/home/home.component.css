@@ -13,6 +13,11 @@
   padding-bottom: 5%;
 }
 
+.home a:first-child {
+  color: #444444;
+  text-decoration: none;
+}
+
 .buttonPrincipal{
   padding: 1em;
   width: 30%;

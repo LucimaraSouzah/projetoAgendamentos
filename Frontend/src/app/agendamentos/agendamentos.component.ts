@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IBeneficiarioDto } from '../interfaces/IBeneficiarioDto';
 import { IEspecialidadeDto } from '../interfaces/IEspecialidadeDto';
 import { IHospitalDto } from '../interfaces/IHospitalDto';
+import { IAgendamentoConfiguracaoDto } from '../interfaces/IAgendamentoConfiguracaoDto';
 
 @Component({
   selector: 'app-agendamentos',
@@ -58,5 +59,4 @@ export class AgendamentosComponent {
         this.listaProfissionais = data as IProfissionalDto[];
       });
   }
-
 }

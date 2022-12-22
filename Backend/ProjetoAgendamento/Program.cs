@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace ProjetoAgendamento
 {
     public class Program
@@ -13,6 +15,8 @@ namespace ProjetoAgendamento
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<ProjetoAgendamento.Database.ApplicationDbContext>();
+            builder.Services.AddControllers().AddJsonOptions(x =>
+                    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             builder.Services.AddCors(options =>
             {

@@ -19,10 +19,12 @@ public partial class AgendamentoConfiguracao
 
     public int IdProfissional { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
     public DateTime DataHoraInicioAtendimento { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
     public DateTime DataHoraFinalAtendimento { get; set; }
 
     [ForeignKey("IdEspecialidade")]
