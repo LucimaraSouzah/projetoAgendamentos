@@ -1,15 +1,1 @@
-.buttonPrincipal:hover {
-  background-color: #036d6d;
-  transition: background-color 0.5s;
-  color: #fafafa;
-}
 
-.check {
-  width: 5px;
-  height: 5px;
-}
-
-.notCheck {
-  width: 5px;
-  height: 5px;
-}

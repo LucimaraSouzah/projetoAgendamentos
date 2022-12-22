@@ -50,7 +50,7 @@ export class CadastrarHospitalComponent implements OnInit{
 
   cadastrar() {
     if (this.validarInformacoes()) {
-      if (this.hospital.idHospital = 0) {
+      if (this.hospital.idHospital == 0) {
         this.http
           .post('https://localhost:7206/api/Hospital', this.hospital)
           .subscribe((data) => {
@@ -62,7 +62,7 @@ export class CadastrarHospitalComponent implements OnInit{
         this.http
            .patch('https://localhost:7206/api/Hospital', this.hospital)
            .subscribe((data) => {
-             this.router.navigate(['opcoes']);
+             this.router.navigate(['listaHospital']);
            });
       }
     } else {

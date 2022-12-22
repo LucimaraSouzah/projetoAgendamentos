@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+
 <div
 id="container"
 class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
@@ -83,7 +83,7 @@ class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
      *ngIf="mensagemErro "
     Erro ao ediatar o Hospital! Verifique e tente novamente. >
     </div>
-   <button type="submit" class="btn buttonPrincipal" (click)="editar()">
+   <button type="submit" class="btn buttonPrincipal" (click)="atualizarHospital(hospital.idHospital)">
     Salvar
   </button>
   </form>
