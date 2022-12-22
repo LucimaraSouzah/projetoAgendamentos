@@ -6,33 +6,30 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-hospital-lista',
   templateUrl: './hospital-lista.component.html',
-  styleUrls: ['./hospital-lista.component.css']
+  styleUrls: ['./hospital-lista.component.css'],
 })
 export class ListaHospitalComponent {
-listaHospitais: IHospitalDto[] = [];
+  listaHospitais: IHospitalDto[] = [];
 
   imageCheck = '/src/assets/check.svg';
   imageNotCheck = '/src/assets/not.svg';
 
-  constructor(private http: HttpClient, private router: Router){
-    this.listarHospitais()
+  constructor(private http: HttpClient, private router: Router) {
+    this.listarHospitais();
   }
 
-
-  listarHospitais(){
-    this.http
-    .get('https://localhost:7206/api/Hospital/')
-    .subscribe((data) => {
+  listarHospitais() {
+    this.http.get('https://localhost:7206/api/Hospital/').subscribe((data) => {
       this.listaHospitais = data as IHospitalDto[];
     });
   }
 
-  removerHospital(id: number){
+  removerHospital(id: number) {
     this.http
-    .delete(`https://localhost:7206/api/Hospital/${id}`)
-    .subscribe((data) => {
-      this.listarHospitais();
-    });
+      .delete(`https://localhost:7206/api/Hospital/${id}`)
+      .subscribe((data) => {
+        this.listarHospitais();
+      });
   }
 
   editarHospital(id: number) {

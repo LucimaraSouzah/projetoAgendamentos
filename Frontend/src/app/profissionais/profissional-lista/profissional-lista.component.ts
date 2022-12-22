@@ -16,10 +16,10 @@ export class ListaProfissionalComponent {
   imageNotCheck = '/assets/not.svg';
 
   constructor(private http: HttpClient, private router: Router) {
-    this.listarTodos();
+    this.listarProfissionais();
   }
 
-  listarTodos() {
+  listarProfissionais() {
     this.http
       .get('https://localhost:7206/api/Profissional/')
       .subscribe((data) => {
@@ -31,7 +31,7 @@ export class ListaProfissionalComponent {
     this.http
       .delete(`https://localhost:7206/api/Profissional/${id}`)
       .subscribe((data) => {
-        this.listarTodos();
+        this.listarProfissionais();
       });
   }
 

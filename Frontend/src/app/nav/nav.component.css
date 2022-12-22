@@ -8,3 +8,9 @@ nav {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.configuracao {
+  background-image: url(../../assets/configuracao.svg);
+  padding: 1.5em;
+  padding-top: 1em;
+}
