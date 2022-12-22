@@ -1,26 +1,28 @@
-
+<app-nav></app-nav>
 <div
-id="container"
-class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
 >
-<div class="text-center">
-  <h2> Liste os dados do hospital</h2>
-  <a href="cadastrarHospital"
-  ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
-  Cadastrar
-  </button></a
-  >
+  <div class="text-center">
+    <h2>Hospitais cadastrados no sistema</h2>
+    <a href="cadastrarHospital"
+      ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
+        Cadastrar
+      </button></a
+    >
+  </div>
 </div>
 
-<div class=" table-responsive">
+<div class="table-responsive">
   <table class="table table-secondary">
     <thead>
       <tr class="table-dark">
+        <th>#</th>
         <th>Nome</th>
         <th>CNPJ</th>
         <th>Endereço</th>
         <th>Telefone</th>
-        <th>Especialidade</th>
+        <th>CNES</th>
         <th>Ativo</th>
         <th>Editar</th>
         <th>Deletar</th>

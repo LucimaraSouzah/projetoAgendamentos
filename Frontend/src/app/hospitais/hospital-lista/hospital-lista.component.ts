@@ -21,7 +21,7 @@ listaHospitais: IHospitalDto[] = [];
 
   listarHospitais(){
     this.http
-    .get('https://localhost:7206/api/Especialidade/')
+    .get('https://localhost:7206/api/Hospital/')
     .subscribe((data) => {
       this.listaHospitais = data as IHospitalDto[];
     });

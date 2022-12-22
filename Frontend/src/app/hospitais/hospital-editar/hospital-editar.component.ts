@@ -47,7 +47,7 @@ export class EditarHospitalComponent {
     }
   }
 
-  atualizarHospital(id:number) {
+  editarHospital(id:number) {
       this.http.put(
         `https://localhost:7206/api/Hospital/${id}`,
         this.hospital

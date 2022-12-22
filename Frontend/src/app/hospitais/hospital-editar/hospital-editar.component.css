@@ -1,16 +1,22 @@
-.buttonPrincipal {
+#hospitalCadastrar{
+  width: 100%;
+  height: 100%;
+}
+
+.buttonPrincipal{
   margin-bottom: 20px;
 }
 
 #formHospital {
-  width: 90%;
+  width : 90%;
 }
 
 #formHospital div {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-widht: 768px) {
+
   #textcontainer {
     width: 88vh;
   }
