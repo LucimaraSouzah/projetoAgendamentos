@@ -11,9 +11,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* #profissionalContainer {
-    height: 88vh;
-  } */
+  #profissionalContainer {
+    width: 88vh;
+  }
   #formprofissional {
     width: 40%;
   }
