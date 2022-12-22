@@ -10,7 +10,7 @@ import { IProfissionalDto } from '../interfaces/IProfissionalDto';
 @Component({
   selector: 'app-agendamentos-configuracao',
   templateUrl: './agendamentos-configuracao.component.html',
-  styleUrls: ['./agendamentos-configuracao.component.css']
+  styleUrls: ['./agendamentos-configuracao.component.css'],
 })
 export class AgendamentosConfiguracaoComponent {
   listaBeneficiarios: IBeneficiarioDto[] = [];
@@ -20,7 +20,6 @@ export class AgendamentosConfiguracaoComponent {
 
   agendamentoConfiguracao!: IAgendamentoConfiguracaoDto;
   idAgendamentoConfiguracao!: number;
-
 
   mensagemSucesso = false;
   mensagemErro = false;
@@ -46,65 +45,42 @@ export class AgendamentosConfiguracaoComponent {
         endereco: '',
         telefone: '',
         cnes: '',
-        ativo: false
+        ativo: false,
       },
       idProfissionalNavigation: {
         idProfissional: 0,
         nome: '',
         telefone: '',
         endereco: '',
-        ativo: false
-      }
+        ativo: false,
+      },
     };
 
     if (this.idAgendamentoConfiguracao) {
       this.http
-        .get(`https://localhost:7206/api/Beneficiario/${this.idAgendamentoConfiguracao}`)
+        .get(
+          `https://localhost:7206/api/Beneficiario/${this.idAgendamentoConfiguracao}`
+        )
         .subscribe((data) => {
           this.agendamentoConfiguracao = data as IAgendamentoConfiguracaoDto;
-          console.log(this.agendamentoConfiguracao)
+          console.log(this.agendamentoConfiguracao);
         });
     }
   }
 
   cadastrar() {
-    if (this.validarInformacoes()) {
-      if (this.agendamentoConfiguracao.idConfiguracao == 0) {
-        this.http
-          .post('https://localhost:7206/api/AgendamentoConfiguracao', this.agendamentoConfiguracao)
-          .subscribe((data) => {
-            console.log(data)
-            this.router.navigate(['listaBeneficiario']);
-            this.mensagemErro = false;
-            this.mensagemSucesso = true;
-          });
-      } else {
-        this.http
-          .patch('https://localhost:7206/api/AgendamentoConfiguracao', this.agendamentoConfiguracao)
-          .subscribe((data) => {
-            this.router.navigate(['listaBeneficiario']);
-          });
-      }
-    } else {
-      this.mensagemSucesso = false;
-      this.mensagemErro = true;
-    }
+    this.http
+      .post(
+        'https://localhost:7206/api/AgendamentoConfiguracao',
+        this.agendamentoConfiguracao
+      )
+      .subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['listaBeneficiario']);
+        this.mensagemErro = false;
+        this.mensagemSucesso = true;
+      });
   }
-
-  validarInformacoes(): boolean {
-    // if (
-    //   this.beneficiario.nome == '' ||
-    //   this.beneficiario.cpf == '' ||
-    //   this.beneficiario.numeroCarteirinha == '' ||
-    //   this.beneficiario.email == '' ||
-    //   this.beneficiario.senha == ''
-    // ) {
-    //   return false;
-    // }
-    return true;
-  }
-
-
 
   imageCheck = '../../../assets/check.svg';
   imageNotCheck = '/assets/not.svg';
@@ -117,8 +93,6 @@ export class AgendamentosConfiguracaoComponent {
   }
 
   listarTodos() {
-
-
     this.http
       .get('https://localhost:7206/api/Beneficiario/')
       .subscribe((data) => {
@@ -126,18 +100,16 @@ export class AgendamentosConfiguracaoComponent {
       });
   }
 
-  listarEspecialidades(){
+  listarEspecialidades() {
     this.http
-    .get('https://localhost:7206/api/Especialidade/')
-    .subscribe((data) => {
-      this.listaEspecialidades = data as IEspecialidadeDto[];
-    });
+      .get('https://localhost:7206/api/Especialidade/')
+      .subscribe((data) => {
+        this.listaEspecialidades = data as IEspecialidadeDto[];
+      });
   }
 
-  listarHospitais(){
-    this.http
-    .get('https://localhost:7206/api/Hospital/')
-    .subscribe((data) => {
+  listarHospitais() {
+    this.http.get('https://localhost:7206/api/Hospital/').subscribe((data) => {
       this.listaHospitais = data as IHospitalDto[];
     });
   }
@@ -149,5 +121,4 @@ export class AgendamentosConfiguracaoComponent {
         this.listaProfissionais = data as IProfissionalDto[];
       });
   }
-
 }

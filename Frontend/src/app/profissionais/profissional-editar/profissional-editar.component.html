@@ -1,8 +1,5 @@
 <app-nav></app-nav>
-<div
-  id="profissionalContainer"
-  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
->
+<div id="profissionalContainer" class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25">
   <div class="text-center">
     <h2>Edite seus dados</h2>
   </div>
@@ -10,71 +7,36 @@
     <div class="d-flex flex-column flex-lg-row mb-3">
       <div>
         <label for="Nome">Nome:</label>
-        <input
-          type="text"
-          placeholder="Seu nome"
-          required
-          class="form-control"
-          [(ngModel)]="profissional.nome"
-          name="Nome"
-          value="profissional.nome"
-        />
+        <input type="text" placeholder="Seu nome" required class="form-control" [(ngModel)]="profissional.nome"
+          name="Nome" value="profissional.nome" />
       </div>
     </div>
     <div class="d-flex flex-column flex-lg-row mb-3">
       <div>
         <label for="Telefone">Telefone:</label>
-        <input
-          type="tel"
-          placeholder="Seu telefone"
-          class="form-control"
-          [(ngModel)]="profissional.telefone"
-          name="Telefone"
-        />
+        <input type="tel" placeholder="Seu telefone" class="form-control" [(ngModel)]="profissional.telefone"
+          name="Telefone" />
       </div>
       <div class="ms-lg-3">
         <label for="Endereco">Endereço:</label>
-        <input
-          type="text"
-          placeholder="Seu endereço"
-          class="form-control"
-          [(ngModel)]="profissional.endereco"
-          name="Endereco"
-        />
+        <input type="text" placeholder="Seu endereço" class="form-control" [(ngModel)]="profissional.endereco"
+          name="Endereco" />
       </div>
     </div>
     <div class="d-flex align-items-center justify-content-center m-2">
       <label>Ativo:</label>
-      <input
-        ativo="ativo"
-        type="checkbox"
-        name="ativo"
-        class="form-check-input ms-2"
-        [(ngModel)]="profissional.ativo"
-        required
-      />
+      <input ativo="ativo" type="checkbox" name="ativo" class="form-check-input ms-2" [(ngModel)]="profissional.ativo"
+        required />
     </div>
-    <div
-      class="alert alert-light text-center"
-      role="alert"
-      *ngIf="mensagemSucesso"
-    >
+    <div class="alert alert-light text-center" role="alert" *ngIf="mensagemSucesso">
       Dados atualizados com sucesso!
     </div>
-    <div
-      class="alert alert-danger text-center"
-      role="alert"
-      *ngIf="mensagemErro"
-    >
+    <div class="alert alert-danger text-center" role="alert" *ngIf="mensagemErro">
       Erro ao atualizar seus dados! Verifique e tente novamente.
     </div>
 
   </form>
-  <button
-      type="submit"
-      class="btn buttonPrincipal"
-      (click)="editarProfissional(profissional.idProfissional)"
-    >
-      Salvar
-    </button>
+  <button type="submit" class="btn buttonPrincipal" (click)="editarProfissional(profissional.idProfissional)">
+    Salvar
+  </button>
 </div>

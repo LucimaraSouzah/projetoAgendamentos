@@ -56,6 +56,6 @@ import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospi
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,6 +1,6 @@
-import { IEspecialidadeDto } from "./IEspecialidadeDto";
-import { IHospitalDto } from "./IHospitalDto";
-import { IProfissionalDto } from "./IProfissionalDto";
+import { IEspecialidadeDto } from './IEspecialidadeDto';
+import { IHospitalDto } from './IHospitalDto';
+import { IProfissionalDto } from './IProfissionalDto';
 
 export interface IAgendamentoConfiguracaoDto {
   idConfiguracao: number;

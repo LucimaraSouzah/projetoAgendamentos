@@ -50,7 +50,7 @@ export class CadastrarEspecialidadeComponent implements OnInit {
         this.http
           .post('https://localhost:7206/api/Especialidade', this.especialidade)
           .subscribe((data) => {
-             this.router.navigate(['listaEspecialidade']);
+            this.router.navigate(['listaEspecialidade']);
             this.mensagemErro = false;
             this.mensagemSucesso = true;
           });
@@ -69,8 +69,7 @@ export class CadastrarEspecialidadeComponent implements OnInit {
   }
 
   validarInformacoes(): boolean {
-    if (
-      this.especialidade.nome == '' ) {
+    if (this.especialidade.nome == '') {
       return false;
     }
 

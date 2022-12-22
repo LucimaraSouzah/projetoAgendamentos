@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   templateUrl: './profissional-lista.component.html',
   styleUrls: ['./profissional-lista.component.css'],
 })
-
 export class ListaProfissionalComponent {
   listaProfissionais: IProfissionalDto[] = [];
 

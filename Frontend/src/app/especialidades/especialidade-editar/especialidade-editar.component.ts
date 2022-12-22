@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-especialidade-editar',
   templateUrl: './especialidade-editar.component.html',
-  styleUrls: ['./especialidade-editar.component.css']
+  styleUrls: ['./especialidade-editar.component.css'],
 })
 export class EditarEspecialidadeComponent {
   especialidade!: IEspecialidadeDto;
@@ -35,22 +35,20 @@ export class EditarEspecialidadeComponent {
 
     if (this.idEspecialidade) {
       this.http
-      .get(`https://localhost:7206/api/Especialidade/${this.idEspecialidade}`)
-      .subscribe((data) => {
-        this.especialidade = data as IEspecialidadeDto;
-      });
+        .get(`https://localhost:7206/api/Especialidade/${this.idEspecialidade}`)
+        .subscribe((data) => {
+          this.especialidade = data as IEspecialidadeDto;
+        });
     }
   }
 
   atualizarEspecialidade(id: number) {
-    this.http.put(
-      `https://localhost:7206/api/Especialidade/${id}`,
-      this.especialidade
-    )
-    .subscribe((data) => {
-      this.router.navigate(['listaEspecialidade']);
-      this.mensagemErro = false;
-      this.mensagemSucesso = true;
-    })
+    this.http
+      .put(`https://localhost:7206/api/Especialidade/${id}`, this.especialidade)
+      .subscribe((data) => {
+        this.router.navigate(['listaEspecialidade']);
+        this.mensagemErro = false;
+        this.mensagemSucesso = true;
+      });
   }
 }

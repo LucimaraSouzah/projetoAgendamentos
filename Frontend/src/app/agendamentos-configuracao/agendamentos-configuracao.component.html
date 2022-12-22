@@ -1,8 +1,5 @@
 <app-nav></app-nav>
-<div
-  id="container"
-  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
->
+<div id="container" class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25">
   <div class="text-center">
     <h2>Agendamentos Configuração</h2>
     <p>Informe sua disponibilidade para atendimento</p>
@@ -37,52 +34,16 @@
         </select>
       </div>
     </div>
-
     <div class="d-flex flex-column mb-3">
       <label for="Nome">Data início e horário do atendimento:</label>
-      <input type="datetime" name="dataHorarioInicio" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioInicio"/>
+      <input type="datetime" name="dataHorarioInicio" class="form-control"
+        [(ngModel)]="agendamentoConfiguracao.dataHorarioInicio" />
     </div>
-
     <div class="d-flex flex-column mb-3">
       <label for="Nome">Data e horário final do atendimento:</label>
-      <input type="datetime" name="" id="" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioFim" name="dataHorarioFim"/>
+      <input type="datetime" name="" id="" class="form-control" [(ngModel)]="agendamentoConfiguracao.dataHorarioFim"
+        name="dataHorarioFim" />
     </div>
-
-    <!-- <div class="ms-lg-3">
-        <label for="Nome">Profissional:</label>
-        <select class="form-select">
-          <option></option>
-          <option *ngFor="let profissional of listaProfissionais">
-            {{ profissional.nome }}
-          </option>
-        </select>
-      </div> -->
-    <!-- <div class="d-flex flex-column flex-lg-row mb-3 justify-content-center">
-      <div>
-        <label for="Nome">Ativo:</label>
-        <select class="form-select">
-          <option></option>
-          <option *ngFor="let beneficiario of listaBeneficiarios">
-            {{ beneficiario.nome }}
-          </option>
-        </select>
-      </div>
-    </div> -->
-
-    <!-- <div
-      class="alert alert-light text-center"
-      role="alert"
-      *ngIf="mensagemSucesso"
-    >
-      Cadastro realizado com sucesso!
-    </div>
-    <div
-      class="alert alert-danger text-center"
-      role="alert"
-      *ngIf="mensagemErro"
-    >
-      Erro ao cadastrar! Verifique os dados e tente novamente.
-    </div> -->
     <button type="submit" class="btn buttonPrincipal" (click)="cadastrar()">Enviar</button>
   </form>
 </div>

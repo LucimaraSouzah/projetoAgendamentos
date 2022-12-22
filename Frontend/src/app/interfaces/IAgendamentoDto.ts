@@ -1,7 +1,7 @@
-import { IBeneficiarioDto } from "./IBeneficiarioDto";
-import { IEspecialidadeDto } from "./IEspecialidadeDto";
-import { IHospitalDto } from "./IHospitalDto";
-import { IProfissionalDto } from "./IProfissionalDto";
+import { IBeneficiarioDto } from './IBeneficiarioDto';
+import { IEspecialidadeDto } from './IEspecialidadeDto';
+import { IHospitalDto } from './IHospitalDto';
+import { IProfissionalDto } from './IProfissionalDto';
 
 export interface IAgendamentoDto {
   idAgendamento: number;

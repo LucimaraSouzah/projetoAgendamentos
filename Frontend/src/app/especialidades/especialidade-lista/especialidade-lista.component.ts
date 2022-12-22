@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-especialidade-lista',
   templateUrl: './especialidade-lista.component.html',
-  styleUrls: ['./especialidade-lista.component.css']
+  styleUrls: ['./especialidade-lista.component.css'],
 })
 export class ListaEspecialidadeComponent {
   listaEspecialidades: IEspecialidadeDto[] = [];
@@ -14,33 +14,27 @@ export class ListaEspecialidadeComponent {
   imageCheck = '../../../assets/check.svg';
   imageNotCheck = '/assets/not.svg';
 
-  constructor(private http: HttpClient, private router: Router){
-    this.listarEspecialidades()
+  constructor(private http: HttpClient, private router: Router) {
+    this.listarEspecialidades();
   }
 
-  listarEspecialidades(){
+  listarEspecialidades() {
     this.http
-    .get('https://localhost:7206/api/Especialidade/')
-    .subscribe((data) => {
-      this.listaEspecialidades = data as IEspecialidadeDto[];
-    });
+      .get('https://localhost:7206/api/Especialidade/')
+      .subscribe((data) => {
+        this.listaEspecialidades = data as IEspecialidadeDto[];
+      });
   }
 
-  removerEspecialidade(id: number){
+  removerEspecialidade(id: number) {
     this.http
-    .delete(`https://localhost:7206/api/Especialidade/${id}`)
-    .subscribe((data) => {
-      this.listarEspecialidades();
-    });
+      .delete(`https://localhost:7206/api/Especialidade/${id}`)
+      .subscribe((data) => {
+        this.listarEspecialidades();
+      });
   }
 
   editarEspecialidade(id: number) {
     this.router.navigate([`editarEspecialidade/${id}`]);
   }
-
 }
-
-
-
-
-

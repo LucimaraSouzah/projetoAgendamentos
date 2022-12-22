@@ -43,15 +43,13 @@ export class EditarProfissionalComponent {
     }
   }
 
-  editarProfissional(id:number) {
-    this.http.put(
-      `https://localhost:7206/api/Profissional/${id}`,
-      this.profissional
-    )
-    .subscribe((data) => {
-      this.router.navigate(['listaProfissional']);
-      this.mensagemErro = false;
-      this.mensagemSucesso = true;
-    }
-    )}
+  editarProfissional(id: number) {
+    this.http
+      .put(`https://localhost:7206/api/Profissional/${id}`, this.profissional)
+      .subscribe((data) => {
+        this.router.navigate(['listaProfissional']);
+        this.mensagemErro = false;
+        this.mensagemSucesso = true;
+      });
+  }
 }

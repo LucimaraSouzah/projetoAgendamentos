@@ -1,23 +1,9 @@
-/* #hospitalCadastrar{
-  width: 100%;
-  height: 100%;
-} */
-
-.buttonPrincipal{
+.buttonPrincipal {
   margin-bottom: 20px;
   width: 15em;
 }
 
-/* #formHospital {
-  width : 90%;
-}
-
-#formHospital div {
-  width: 100%;
-} */
-
 @media screen and (min-widht: 768px) {
-
   #textcontainer {
     width: 88vh;
   }

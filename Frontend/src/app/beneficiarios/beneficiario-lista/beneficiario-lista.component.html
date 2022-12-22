@@ -1,15 +1,10 @@
 <app-nav></app-nav>
-<div
-  id="container"
-  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
->
+<div id="container" class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25">
   <div class="text-center">
     <h2>Beneficiários cadastrados no sistema</h2>
-    <a href="cadastrarBeneficiario"
-      ><button type="submit" class="btn buttonPrincipal mb-4 px-4 py-2">
+    <a href="cadastrarBeneficiario"><button type="submit" class="btn buttonPrincipal mb-4 px-4 py-2">
         Cadastrar
-      </button></a
-    >
+      </button></a>
   </div>
 </div>
 
@@ -40,20 +35,12 @@
         <td [ngClass]="beneficiario.ativo ? 'check' : 'notCheck'"></td>
         <td>{{ beneficiario.email }}</td>
         <td>
-          <button
-            type="submit"
-            class="btn btn-danger"
-            (click)="editarBeneficiario(beneficiario.idBeneficiario)"
-          >
+          <button type="submit" class="btn btn-danger" (click)="editarBeneficiario(beneficiario.idBeneficiario)">
             Editar
           </button>
         </td>
         <td>
-          <button
-            type="submit"
-            class="btn btn-primary"
-            (click)="removerBeneficiario(beneficiario.idBeneficiario)"
-          >
+          <button type="submit" class="btn btn-primary" (click)="removerBeneficiario(beneficiario.idBeneficiario)">
             Deletar
           </button>
         </td>

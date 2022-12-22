@@ -47,15 +47,13 @@ export class EditarBeneficiarioComponent {
     }
   }
 
-  atualizarBeneficiario(id:number) {
-    this.http.put(
-      `https://localhost:7206/api/Beneficiario/${id}`,
-      this.beneficiario
-    )
-    .subscribe((data) => {
-      this.router.navigate(['listaBeneficiario']);
-      this.mensagemErro = false;
-      this.mensagemSucesso = true;
-    }
-    )}
+  atualizarBeneficiario(id: number) {
+    this.http
+      .put(`https://localhost:7206/api/Beneficiario/${id}`, this.beneficiario)
+      .subscribe((data) => {
+        this.router.navigate(['listaBeneficiario']);
+        this.mensagemErro = false;
+        this.mensagemSucesso = true;
+      });
+  }
 }

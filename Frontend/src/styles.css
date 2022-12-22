@@ -1,18 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
   background-color: #dce9e5;
 }
 
-#container{
+#container {
   width: 100%;
   height: 100%;
 }
-.logo{
+.logo {
   text-decoration: none;
   color: #444;
-
 }
 .avan {
   color: #008585;

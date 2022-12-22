@@ -24,28 +24,34 @@ import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospi
 import { EditarHospitalComponent } from './hospitais/hospital-editar/hospital-editar.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent },
 
-  { path: 'agendamentos', component: AgendamentosComponent},
-  { path: 'agendamentosConfiguracao', component: AgendamentosConfiguracaoComponent},
+  { path: 'agendamentos', component: AgendamentosComponent },
+  {
+    path: 'agendamentosConfiguracao',
+    component: AgendamentosConfiguracaoComponent,
+  },
 
   { path: 'cadastrarBeneficiario', component: CadastrarBeneficiarioComponent },
-  { path: 'listaBeneficiario', component: ListaBeneficiarioComponent},
+  { path: 'listaBeneficiario', component: ListaBeneficiarioComponent },
   { path: 'editarBeneficiario', component: EditarBeneficiarioComponent },
   { path: 'editarBeneficiario/:id', component: EditarBeneficiarioComponent },
 
-  { path: 'cadastrarProfissional', component: CadastrarProfissionalComponent},
+  { path: 'cadastrarProfissional', component: CadastrarProfissionalComponent },
   { path: 'listaProfissional', component: ListaProfissionalComponent },
-  { path: 'editarProfissional', component: EditarProfissionalComponent},
-  { path: 'editarProfissional/:id', component: EditarProfissionalComponent},
+  { path: 'editarProfissional', component: EditarProfissionalComponent },
+  { path: 'editarProfissional/:id', component: EditarProfissionalComponent },
 
-  { path: 'cadastrarEspecialidade', component: CadastrarEspecialidadeComponent },
+  {
+    path: 'cadastrarEspecialidade',
+    component: CadastrarEspecialidadeComponent,
+  },
   { path: 'listaEspecialidade', component: ListaEspecialidadeComponent },
   { path: 'editarEspecialidade', component: EditarEspecialidadeComponent },
   { path: 'editarEspecialidade/:id', component: EditarEspecialidadeComponent },
 
   { path: 'cadastrarHospital', component: CadastrarHospitalComponent },
-  { path: 'listaHospital', component: ListaHospitalComponent},
+  { path: 'listaHospital', component: ListaHospitalComponent },
   { path: 'editarHospital', component: EditarHospitalComponent },
   { path: 'editarHospital/:id', component: EditarHospitalComponent },
 ];

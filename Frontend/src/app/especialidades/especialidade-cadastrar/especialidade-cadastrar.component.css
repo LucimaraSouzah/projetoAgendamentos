@@ -6,13 +6,11 @@
   width: 100%;
 }
 
-.ativo
-{
+.ativo {
   display: flex;
   padding: 5px;
-
 }
-.buttonPrincipal{
+.buttonPrincipal {
   width: 15em;
 }
 

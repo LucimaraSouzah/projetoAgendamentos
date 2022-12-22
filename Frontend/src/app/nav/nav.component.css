@@ -16,13 +16,13 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-    .icon-config {
-        display: none;
-    }
+  .icon-config {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .icon-config-sm {
-      display: none;
+    display: none;
   }
 }

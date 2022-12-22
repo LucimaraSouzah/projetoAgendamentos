@@ -1,19 +1,14 @@
 <app-nav></app-nav>
-<div
-  id="profissionalContainer"
-  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
->
+<div id="profissionalContainer" class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25">
   <div class="text-center">
     <h2>Profissionais cadastrados no sistema</h2>
-    <a href="cadastrarProfissional"
-      ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
+    <a href="cadastrarProfissional"><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
         Cadastrar
-      </button></a
-    >
+      </button></a>
   </div>
-  </div>
+</div>
 
-  <div class="table-responsive">
+<div class="table-responsive">
   <table class="table table-secondary">
     <thead>
       <tr class="table-dark">
@@ -34,20 +29,12 @@
         <td>{{ profissional.endereco }}</td>
         <td [ngClass]="profissional.ativo ? 'check' : 'notCheck'"></td>
         <td>
-          <button
-            type="submit"
-            class="btn btn-danger"
-            (click)="editarProfissional(profissional.idProfissional)"
-          >
+          <button type="submit" class="btn btn-danger" (click)="editarProfissional(profissional.idProfissional)">
             Editar
           </button>
         </td>
         <td>
-          <button
-            type="submit"
-            class="btn btn-primary"
-            (click)="removerProfissional(profissional.idProfissional)"
-          >
+          <button type="submit" class="btn btn-primary" (click)="removerProfissional(profissional.idProfissional)">
             Deletar
           </button>
         </td>

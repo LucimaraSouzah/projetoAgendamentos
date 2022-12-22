@@ -33,7 +33,7 @@ export class CadastrarProfissionalComponent implements OnInit {
       nome: '',
       telefone: '',
       endereco: '',
-      ativo: false
+      ativo: false,
     };
 
     if (this.idProfissional) {
@@ -70,9 +70,7 @@ export class CadastrarProfissionalComponent implements OnInit {
   }
 
   validarInformacoes(): boolean {
-    if (
-      this.profissional.nome == ''
-    ) {
+    if (this.profissional.nome == '') {
       return false;
     }
     return true;

@@ -10,7 +10,7 @@ import { IAgendamentoConfiguracaoDto } from '../interfaces/IAgendamentoConfigura
 @Component({
   selector: 'app-agendamentos',
   templateUrl: './agendamentos.component.html',
-  styleUrls: ['./agendamentos.component.css']
+  styleUrls: ['./agendamentos.component.css'],
 })
 export class AgendamentosComponent {
   listaBeneficiarios: IBeneficiarioDto[] = [];
@@ -36,18 +36,16 @@ export class AgendamentosComponent {
       });
   }
 
-  listarEspecialidades(){
+  listarEspecialidades() {
     this.http
-    .get('https://localhost:7206/api/Especialidade/')
-    .subscribe((data) => {
-      this.listaEspecialidades = data as IEspecialidadeDto[];
-    });
+      .get('https://localhost:7206/api/Especialidade/')
+      .subscribe((data) => {
+        this.listaEspecialidades = data as IEspecialidadeDto[];
+      });
   }
 
-  listarHospitais(){
-    this.http
-    .get('https://localhost:7206/api/Hospital/')
-    .subscribe((data) => {
+  listarHospitais() {
+    this.http.get('https://localhost:7206/api/Hospital/').subscribe((data) => {
       this.listaHospitais = data as IHospitalDto[];
     });
   }
