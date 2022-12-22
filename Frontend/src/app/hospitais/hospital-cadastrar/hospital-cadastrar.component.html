@@ -1,80 +1,97 @@
 <app-nav></app-nav>
-
-<div class = "text-container">
-  <h2> Cadastrar Hospitais</h2>
-  <p>Preencha os dados do hospital que deseja atendimento</p>
-</div>
-<form method="post" class="d-flex flex column" id ="formHospital">
-  <div class ="d-flex flex-column flex-lg-row mb-3">
-    <div>
-      <label for="Nome">Nome:</label>
-      <input
-        type="text"
-        placeholder="nome"
-        required
-        class="form-control"
-        nome="Nome"
-      />
+<div
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+ <div class = "text-center">
+    <h2> Cadastrar Hospitais</h2>
+    <p>Preencha os dados do hospital que deseja atendimento</p>
   </div>
-  <div class ="ms-lg-3">
-    <label for = "CNPJ" > CNPJ:</label>
-    <input
-    type="text"
-    placeholder="CNPJ"
-    required
-    class="form-control"
-    />
+  <form method="post" class="d-flex flex column" id ="formHospital">
+    <div class ="d-flex flex-column flex-lg-row mb-3">
+      <div>
+        <label for="Nome">Nome:</label>
+        <input
+          type="text"
+          placeholder="nome"
+          required
+          class="form-control"
+          nome="Nome"
+        />
     </div>
     <div class="ms-lg-3">
-      <label for = "Endereço" > Endereço:</label>
+      <label for="CNPJ">CNPJ:</label>
       <input
       type="text"
-      placeholder="Endereço"
+      placeholder="CNPJ"
       required
       class="form-control"
       />
-      <div class="ms-lg-3">
-        <label for = "Telefone" > Telefone:</label>
-        <input
-        type="text"
-        placeholder="Telefone"
-        required
-        class="form-control"
-        />
-        </div>
       </div>
-      <form class="ms-lg-3">
-        <label for = "Especialidade" > Especialidade:</label>
+      <div class="ms-lg-3">
+        <label for="Endereço">Endereço:</label>
         <input
         type="text"
-        placeholder="Especialidade"
+        placeholder="Endereço"
         required
         class="form-control"
         />
-        <div class ="ms-lg-3">
-          <label for = "CNES" > CNES:</label>
+        <div class="ms-lg-3">
+          <label for="Telefone"> Telefone:</label>
           <input
           type="text"
-          placeholder="CNPJ"
+          placeholder="Telefone"
           required
           class="form-control"
           />
-    </div>
-        <div class="alert alert-light text-center"
-          role="alert"
-          *ngIf="mensagemSucesso"
-        >
-          Cadastro realizado com sucesso!
-    </div>
-        <div
-        class= "alert alert-light text-center"
+          </div>
+        </div>
+        <form class="ms-lg-3">
+          <label for="Especialidade"> Especialidade:</label>
+          <input
+          type="text"
+          placeholder="Especialidade"
+          required
+          class="form-control"
+          />
+          <div class ="ms-lg-3">
+            <label for = "CNES" > CNES:</label>
+            <input
+            type="text"
+            placeholder="CNPJ"
+            required
+            class="form-control"
+            />
+            <label>Ativo:</label>
+            <input
+              ativo="ativo"
+              type="checkbox"
+              name="ativo"
+              class="form-check-input ms-2"
+              [(ngModel)]="hospital.ativo"
+              required
+            />
+      </div>
+          <div class="alert alert-light text-center"
+            role="alert"
+            *ngIf="mensagemSucesso"
+          >
+            Cadastro realizado com sucesso!
+      </div>
+      <div
+        class="alert alert-light text-center"
         role="alert"
         *ngIf="mensagemErro"
-    >  >
-         Erro ao cadastrar! Verifique os dados e tente novamente.
-  </div>
- <button type = "submit" class="btn buttonPrincipal" (click)="cadastrar()">
-  Enviar
- </button>
-</form>
+      >
+        Erro ao cadastrar! Verifique os dados e tente novamente.
+    </div>
+    <button
+      type="submit"
+      class="btn buttonPrincipal"
+      (click)="cadastrar()"
+    >
+      Enviar
+    </button>
+  </form>
 </div>
+

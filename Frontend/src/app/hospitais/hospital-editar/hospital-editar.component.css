@@ -1,0 +1,20 @@
+.buttonPrincipal {
+  margin-bottom: 20px;
+}
+
+#formHospital {
+  width: 90%;
+}
+
+#formHospital div {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #textcontainer {
+    width: 88vh;
+  }
+  #formHospital div {
+    width: 40%;
+  }
+}

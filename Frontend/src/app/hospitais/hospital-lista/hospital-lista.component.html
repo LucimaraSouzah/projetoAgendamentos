@@ -1,1 +1,59 @@
-<p>hospital-lista works!</p>
+
+<div
+id="container"
+class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+<div class="text-center">
+  <h2> Liste os dados do hospital</h2>
+  <a href="cadastrarHospital"
+  ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
+  Cadastrar
+  </button></a
+  >
+</div>
+
+<div class=" table-responsive">
+  <table class="table table-secondary">
+    <thead>
+      <tr class="table-dark">
+        <th>Nome</th>
+        <th>CNPJ</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Especialidade</th>
+        <th>Ativo</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hospital of listaHospitais">
+        <th scope="row">{{ hospital.idBeneficiario }}</th>
+        <td>{{ hospital.nome }}</td>
+        <td>{{ hospital.cnpj }}</td>
+        <td>{{ hospital.endereco }}</td>
+        <td>{{ hospital.telefone }}</td>
+        <td>{{ hospital.especialidade }}</td>
+        <td [ngClass]="hospital.ativo ? 'check' : 'notCheck'"></td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-danger"
+            (click)="editarHospital(hospital.idHospital)"
+          >
+            Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            (click)="removerHospital(hospital.idHospital)"
+          >
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

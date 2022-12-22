@@ -1,13 +1,17 @@
 <app-nav></app-nav>
-<div>
-  <h2>Especialidades cadastradas no Sistema</h2>
-  <a href="cadastrarEspecialidade"
-    ><button type="submit" class="buttonPrincipal">
-      Cadastrar Especialidade
-    </button></a
-  >
+<div
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+  <div class="text-center">
+    <h2>Especialidades cadastradas no Sistema</h2>
+    <a href="cadastrarEspecialidade"
+      ><button type="submit" class="buttonPrincipal mb-4 px-4 py-2">
+        Cadastrar
+      </button></a
+    >
+  </div>
 </div>
-
 <div class="table-responsive">
   <table class="table table-secondary">
     <thead>
@@ -16,7 +20,7 @@
         <th>Especialidade</th>
         <th>Descrição</th>
         <th>Ativo</th>
-        <th>Atualizar</th>
+        <th>Editar</th>
         <th>Deletar</th>
       </tr>
     </thead>
