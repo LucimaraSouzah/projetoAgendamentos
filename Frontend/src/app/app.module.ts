@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 
 import { AgendamentosComponent } from './agendamentos/agendamentos.component';
+import { AgendamentosConfiguracaoComponent } from './agendamentos-configuracao/agendamentos-configuracao.component';
 
 import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/beneficiario-lista.component';
 import { CadastrarBeneficiarioComponent } from './beneficiarios/beneficiario-cadastrar/beneficiario-cadastrar.component';
@@ -45,6 +46,7 @@ import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospi
     CadastrarHospitalComponent,
     EditarHospitalComponent,
     AgendamentosComponent,
+    AgendamentosConfiguracaoComponent,
   ],
   imports: [
     BrowserModule,
