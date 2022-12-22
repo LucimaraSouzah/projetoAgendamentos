@@ -1,19 +1,20 @@
-.buttonPrincipal {
-  margin-bottom: 20px;
+
+.ativo
+{
+  display: flex;
+  padding: 5px;
+
 }
 
-#formProfissional {
-  width: 90%;
-}
-
-#formProfissional div {
-  width: 100%;
+.buttonPrincipal{
+  width: 15em;
 }
 
 @media screen and (min-width: 768px) {
-  /* #profissionalContainer {
-    height: 88vh;
-  } */
+  #profissionalContainer {
+    width: 88vh;
+  }
+
   #formprofissional {
     width: 40%;
   }
