@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 // Rotas
 import { HomeComponent } from './home/home.component';
 
+import { AgendamentosComponent } from './agendamentos/agendamentos.component';
+
 import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/beneficiario-lista.component';
 import { EditarBeneficiarioComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
 import { CadastrarBeneficiarioComponent } from './beneficiarios/beneficiario-cadastrar/beneficiario-cadastrar.component';
@@ -20,6 +22,8 @@ import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospi
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+
+  { path: 'agendamentos', component: AgendamentosComponent},
 
   { path: 'cadastrarBeneficiario', component: CadastrarBeneficiarioComponent },
   { path: 'listaBeneficiario', component: ListaBeneficiarioComponent},

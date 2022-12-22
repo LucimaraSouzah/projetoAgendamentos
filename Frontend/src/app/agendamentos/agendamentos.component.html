@@ -1,0 +1,111 @@
+<app-nav></app-nav>
+<div
+  id="container"
+  class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
+>
+  <div class="text-center">
+    <h2>Agendamentos</h2>
+    <p>Selecione as melhores opções para sua consulta!</p>
+  </div>
+  <form method="post" class="d-flex flex-column" id="formBeneficiario">
+    <div class="d-flex flex-column flex-lg-row mb-3">
+      <div>
+        <label for="Nome">Beneficiário:</label>
+        <select>
+          <option *ngFor="let beneficiario of listaBeneficiarios">{{ beneficiario.nome }}</option>
+        </select>
+      </div>
+      <div class="ms-lg-3">
+        <label for="Cpf">CPF:</label>
+        <input
+          type="text"
+          placeholder="Seu CPF"
+          required
+          class="form-control"
+          name="Cpf"
+        />
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-lg-row mb-3">
+      <div>
+        <label for="Telefone">Telefone:</label>
+        <input
+          type="tel"
+          placeholder="Seu telefone"
+          class="form-control"
+          name="Telefone"
+        />
+      </div>
+      <div class="ms-lg-3">
+        <label for="Endereco">Endereço:</label>
+        <input
+          type="text"
+          placeholder="Seu endereço"
+          class="form-control"
+          name="Endereco"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="mb-3">
+        <label for="NumeroCarteirinha">Nº da Carteirinha:</label>
+        <input
+          type="text"
+          placeholder="Nº da Carteirinha"
+          required
+          class="form-control"
+          name="NumeroCarteirinha"
+        />
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-lg-row">
+      <div>
+        <label for="Email">E-mail:</label>
+        <input
+          type="text"
+          placeholder="Seu e-mail"
+          required
+          class="form-control"
+          name="Email"
+        />
+      </div>
+      <div class="ms-lg-3">
+        <label for="Senha">Senha:</label>
+        <input
+          type="password"
+          placeholder="Sua senha"
+          required
+          class="form-control"
+          name="Senha"
+        />
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center m-2">
+      <label>Ativo:</label>
+      <input
+        ativo="ativo"
+        type="checkbox"
+        name="ativo"
+        class="form-check-input ms-2"
+        required
+      />
+    </div>
+    <!-- <div
+      class="alert alert-light text-center"
+      role="alert"
+      *ngIf="mensagemSucesso"
+    >
+      Cadastro realizado com sucesso!
+    </div>
+    <div
+      class="alert alert-danger text-center"
+      role="alert"
+      *ngIf="mensagemErro"
+    >
+      Erro ao cadastrar! Verifique os dados e tente novamente.
+    </div> -->
+    <button type="submit" class="btn buttonPrincipal">
+      Enviar
+    </button>
+  </form>
+</div>
