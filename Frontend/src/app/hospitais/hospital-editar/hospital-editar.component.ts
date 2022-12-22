@@ -1,5 +1,6 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+
 import { IHospitalDto } from './../../interfaces/IHospitalDto';
 import { Component } from '@angular/core';
 
@@ -13,6 +14,13 @@ export class EditarHospitalComponent {
   hospital!: IHospitalDto;
   idHospital!: number;
   route: any;
+
+  mensagemSucesso = false;
+  mensagemErro = false;
+
+  constructor(
+  mensagemSucesso = false;
+  mensagemErro = false;
 
   constructor(
     private http: HttpClient,
@@ -37,24 +45,22 @@ export class EditarHospitalComponent {
 
     if (this.idHospital) {
       this.http
-        .get(`https://localhost:7206/api/Hospital/${this.idHospital}`)
-        .subscribe((data) => {
-           this.hospital = data as IHospitalDto;
-        });
+      .get(`https://localhost:7206/api/Hospital/${this.idHospital}`)
+      .subscribe((data) => {
+          this.hospital = data as IHospitalDto;
+      });
     }
   }
 
-  atualizarHospital(id:number) {
-    this.http.put(
-      `https://localhost:7206/api/Hospital/${id}`,
-      this.hospital
-   )
-
-   .subscribe((data) => {
-    this.router.navigate(['listaHospital']);
-    this.mensagemErro = false;
-    this.mensagemSucesso = true;
-   }
-
-   )}
+  editarHospital(id:number) {
+      this.http.put(
+        `https://localhost:7206/api/Hospital/${id}`,
+        this.hospital
+    )
+    .subscribe((data) => {
+      this.router.navigate(['listaHospital']);
+      this.mensagemErro = false;
+      this.mensagemSucesso = true;
+    }
+  )}
 }

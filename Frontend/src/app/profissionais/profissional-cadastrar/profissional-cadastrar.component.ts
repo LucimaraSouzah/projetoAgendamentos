@@ -71,10 +71,7 @@ export class CadastrarProfissionalComponent implements OnInit {
 
   validarInformacoes(): boolean {
     if (
-      this.profissional.nome == '' ||
-      this.profissional.telefone == '' ||
-      this.profissional.endereco == ''
-
+      this.profissional.nome == ''
     ) {
       return false;
     }

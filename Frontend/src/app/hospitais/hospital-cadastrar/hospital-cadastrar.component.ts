@@ -6,10 +6,9 @@ import { Component, OnInit, NgModule } from '@angular/core';
 @Component({
   selector: 'app-hospital-cadastrar',
   templateUrl: './hospital-cadastrar.component.html',
-  styleUrls: ['./hospital-cadastrar.component.css']
+  styleUrls: ['./hospital-cadastrar.component.css'],
 })
-export class CadastrarHospitalComponent implements OnInit{
-  [x: string]: any;
+export class CadastrarHospitalComponent implements OnInit {
   hospital!: IHospitalDto;
   idHospital!: number;
 
@@ -50,7 +49,7 @@ export class CadastrarHospitalComponent implements OnInit{
 
   cadastrar() {
     if (this.validarInformacoes()) {
-      if (this.hospital.idHospital = 0) {
+      if (this.hospital.idHospital == 0) {
         this.http
           .post('https://localhost:7206/api/Hospital', this.hospital)
           .subscribe((data) => {
@@ -60,10 +59,10 @@ export class CadastrarHospitalComponent implements OnInit{
           });
       } else {
         this.http
-           .patch('https://localhost:7206/api/Hospital', this.hospital)
-           .subscribe((data) => {
-             this.router.navigate(['opcoes']);
-           });
+          .patch('https://localhost:7206/api/Hospital', this.hospital)
+          .subscribe((data) => {
+            this.router.navigate(['listaHospital']);
+          });
       }
     } else {
       this.mensagemSucesso = false;
@@ -72,13 +71,9 @@ export class CadastrarHospitalComponent implements OnInit{
   }
 
   validarInformacoes(): boolean {
-    if (
-      this.hospital.nome == ''
-    ) {
+    if (this.hospital.nome == '') {
       return false;
     }
-    // VALIDAR COM REGEX
     return true;
   }
 }
-

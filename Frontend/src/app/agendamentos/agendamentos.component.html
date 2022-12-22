@@ -4,69 +4,79 @@
   class="d-flex flex-column align-items-center p-2 text-dark bg-opacity-25"
 >
   <div class="text-center">
-    <h2>Edite os dados do hospital</h2>
+    <h2>Agendamentos</h2>
+    <p>Selecione as melhores opções para sua consulta!</p>
   </div>
-  <form method="post" class="d-flex flex-column" id="formHospital">
+  <form method="post" class="d-flex flex-column" id="formBeneficiario">
     <div class="d-flex flex-column flex-lg-row mb-3">
       <div>
-        <label for="Nome">Nome:</label>
-        <input
-          type="text"
-          placeholder="Nome"
-          required
-          class="form-control"
-          [(ngModel)]="hospital.nome"
-          name="nome"
-        />
+        <label for="Nome">Beneficiário:</label>
+        <select>
+          <option *ngFor="let beneficiario of listaBeneficiarios">{{ beneficiario.nome }}</option>
+        </select>
       </div>
-
       <div class="ms-lg-3">
-        <label for="CNPJ">CNPJ:</label>
+        <label for="Cpf">CPF:</label>
         <input
           type="text"
-          placeholder="CNPJ"
+          placeholder="Seu CPF"
           required
           class="form-control"
-          name="cnpj"
-          [(ngModel)]="hospital.cnpj"
+          name="Cpf"
         />
       </div>
     </div>
-
     <div class="d-flex flex-column flex-lg-row mb-3">
       <div>
-        <label for="Endereço">Endereço:</label>
+        <label for="Telefone">Telefone:</label>
         <input
-          type="text"
-          placeholder="Endereço"
-          required
+          type="tel"
+          placeholder="Seu telefone"
           class="form-control"
-          [(ngModel)]="hospital.endereco"
-          name="endereco"
+          name="Telefone"
         />
       </div>
       <div class="ms-lg-3">
-        <label for="Telefone"> Telefone:</label>
+        <label for="Endereco">Endereço:</label>
         <input
           type="text"
-          placeholder="Telefone"
+          placeholder="Seu endereço"
+          class="form-control"
+          name="Endereco"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="mb-3">
+        <label for="NumeroCarteirinha">Nº da Carteirinha:</label>
+        <input
+          type="text"
+          placeholder="Nº da Carteirinha"
           required
           class="form-control"
-          [(ngModel)]="hospital.telefone"
-          name="telefone"
+          name="NumeroCarteirinha"
         />
       </div>
     </div>
     <div class="d-flex flex-column flex-lg-row">
       <div>
-        <label for="CNES"> CNES:</label>
+        <label for="Email">E-mail:</label>
         <input
           type="text"
-          placeholder="CNES"
+          placeholder="Seu e-mail"
           required
           class="form-control"
-          [(ngModel)]="hospital.cnes"
-          name="cnes"
+          name="Email"
+        />
+      </div>
+      <div class="ms-lg-3">
+        <label for="Senha">Senha:</label>
+        <input
+          type="password"
+          placeholder="Sua senha"
+          required
+          class="form-control"
+          name="Senha"
         />
       </div>
     </div>
@@ -77,11 +87,10 @@
         type="checkbox"
         name="ativo"
         class="form-check-input ms-2"
-        [(ngModel)]="hospital.ativo"
         required
       />
     </div>
-    <div
+    <!-- <div
       class="alert alert-light text-center"
       role="alert"
       *ngIf="mensagemSucesso"
@@ -94,8 +103,8 @@
       *ngIf="mensagemErro"
     >
       Erro ao cadastrar! Verifique os dados e tente novamente.
-    </div>
-    <button type="submit" class="btn buttonPrincipal" (click)="editarHospital(hospital.idHospital)">
+    </div> -->
+    <button type="submit" class="btn buttonPrincipal">
       Enviar
     </button>
   </form>

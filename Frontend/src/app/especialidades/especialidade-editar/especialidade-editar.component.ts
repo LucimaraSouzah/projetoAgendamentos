@@ -35,7 +35,7 @@ export class EditarEspecialidadeComponent {
 
     if (this.idEspecialidade) {
       this.http
-      .get(`https://localhost:7206/api/Especialidade${this.idEspecialidade}`)
+      .get(`https://localhost:7206/api/Especialidade/${this.idEspecialidade}`)
       .subscribe((data) => {
         this.especialidade = data as IEspecialidadeDto;
       });

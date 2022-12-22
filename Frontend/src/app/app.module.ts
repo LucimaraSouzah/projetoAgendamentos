@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 
+import { AgendamentosComponent } from './agendamentos/agendamentos.component';
+
 import { ListaBeneficiarioComponent } from './beneficiarios/beneficiario-lista/beneficiario-lista.component';
 import { CadastrarBeneficiarioComponent } from './beneficiarios/beneficiario-cadastrar/beneficiario-cadastrar.component';
 import { EditarBeneficiarioComponent } from './beneficiarios/beneficiario-editar/beneficiario-editar.component';
@@ -21,6 +23,8 @@ import { ListaProfissionalComponent } from './profissionais/profissional-lista/p
 import { CadastrarProfissionalComponent } from './profissionais/profissional-cadastrar/profissional-cadastrar.component';
 import { EditarProfissionalComponent } from './profissionais/profissional-editar/profissional-editar.component';
 
+import { ListaHospitalComponent } from './hospitais/hospital-lista/hospital-lista.component';
+import { EditarHospitalComponent } from './hospitais/hospital-editar/hospital-editar.component';
 import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospital-cadastrar.component';
 
 @NgModule({
@@ -37,7 +41,10 @@ import { CadastrarHospitalComponent } from './hospitais/hospital-cadastrar/hospi
     CadastrarProfissionalComponent,
     EditarProfissionalComponent,
     ListaProfissionalComponent,
+    ListaHospitalComponent,
     CadastrarHospitalComponent,
+    EditarHospitalComponent,
+    AgendamentosComponent,
   ],
   imports: [
     BrowserModule,
